@@ -1,0 +1,82 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="SpUsage">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorGrey700</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="fontPath">fonts/WorkSans-Regular.ttf</item>
+    </style>
+
+    <!--BOLD FONTS-->
+
+    <style name="Text.B1" parent="AppTheme">
+        <item name="fontPath">fonts/WorkSans-Bold.ttf</item>
+        <item name="android:textSize">40dp</item>
+        <item name="android:textColor">@color/colorGrey500</item>
+    </style>
+
+    <style name="Text.B2" parent="Text.B1">
+        <item name="android:textSize">26dp</item>
+    </style>
+
+    <style name="Text.B3" parent="Text.B1">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="Text.B4" parent="Text.B1">
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="Text.B14" parent="Text.B1">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <!--TABLET FONTS-->
+
+
+    <!--REGULAR FONTS-->
+    <style name="Text.ActionBar.Title" parent="Text.B2">
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">23dp</item>
+    </style>
+
+    <style name="Text.R1" parent="AppTheme">
+        <item name="fontPath">fonts/WorkSans-Regular.ttf</item>
+        <item name="android:textSize">40dp</item>
+        <item name="android:textColor">@color/colorGrey500</item>
+    </style>
+
+    <style name="Text.R3" parent="Text.R1">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="Text.R2" parent="Text.R1">
+        <item name="android:textSize">26dp</item>
+    </style>
+
+    <style name="Text.R4" parent="Text.R1">
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="Text.R13" parent="Text.R1">
+        <item name="android:textSize">13dp</item>
+    </style>
+
+    <!--TABLET FONTS-->
+
+
+    <!--LIGHT FONTS-->
+
+    <!--TABLET FONTS-->
+
+
+    <style name="DialogSideInOutAnimation">
+        <item name="android:windowEnterAnimation">@anim/enter_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/exit_to_bottom</item>
+    </style>
+
+
+</resources>

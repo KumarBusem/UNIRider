@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "40420207386",
+    "firebase_url": "https://sendfast-rider-2021.firebaseio.com",
+    "project_id": "sendfast-rider-2021",
+    "storage_bucket": "sendfast-rider-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40420207386:android:77cdbf0245a44e1a1d9aa3",
+        "android_client_info": {
+          "package_name": "com.dcartlogistics.data"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40420207386-vufcqngd6olsbc2icsh1fglj2h88bh6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7ljL8g3JBVy7lvX3i_n6RWYTmVDhl5rI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40420207386-vufcqngd6olsbc2icsh1fglj2h88bh6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40420207386:android:295acf37c975262e1d9aa3",
+        "android_client_info": {
+          "package_name": "com.dcartlogistics.rider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40420207386-vufcqngd6olsbc2icsh1fglj2h88bh6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7ljL8g3JBVy7lvX3i_n6RWYTmVDhl5rI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40420207386-vufcqngd6olsbc2icsh1fglj2h88bh6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40420207386:android:295acf37c975262e1d9aa3",
+        "android_client_info": {
+          "package_name": "com.dcartlogistics.rider.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40420207386-vufcqngd6olsbc2icsh1fglj2h88bh6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7ljL8g3JBVy7lvX3i_n6RWYTmVDhl5rI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40420207386-vufcqngd6olsbc2icsh1fglj2h88bh6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

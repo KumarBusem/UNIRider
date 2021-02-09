@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">UNI Rider</string>
+    <string name="n_a">N/A</string>
+    <string name="rid">RID: </string>
+    <string name="ofd"> Ofd</string>
+    <string name="delivered">Delivered</string>
+    <string name="declaration_heading">As an Employee at DCART LOGISTICS PVT. LTD. I shall abide by the below mentioned rules / terms&amp;conditions:</string>
+    <string name="declaration_content"><![CDATA[- I agree to a commitment period of 6 months as per the contract period declared by DCART.\n \n- I take responsibility to collect my offer letter and joining form from the company post training and acknowledge that attending training will be a confirmation of joining the organization. \n\n- I will wear a proper uniform at all times i.e Denim, T-Shirt, shoes and Helmet. \n\n- I will not misbehave with any individual involved with DCART as a Merchant, Customer, or Employee. \n\n- I will not be engaged in any illegal or indecent activity that might bring bad repute to the company. \n\n- I will responsibly keep any inventory provided by DCART or their clients (MOBILE, TSHIRT, BAG or anything as such) and boot cash in good care. \n\n- DCART will not be responsible for any activity during my non-working hours and is not liable for scrutiny. \n\n- I will be an an obedient and sincere employee of DCART and I shall not be part of any unions. \n\n- DCART reserves the right to cut the incentives of any particular date if I am found not performing well on the mentioned points. \n\n- I’m completely responsible for the loss of any valuable item given to me for delivery. The amount of which can be deducted from my salary/from me. In case of suspicion, I can be produced in the nearest police station. \n\n- If i am found guilty/suspected of conducting any illegal activity, i’m solely responsible for it, all other employees of DCART shall be treated as innocent unless they are involved in the activity and I can be deported at the nearest police station. \n\n- I will not take any unauthorized/uninformed leaves failing which the company has the right to take decision of my tenure. \n\n- I have attended and taken proper training given at the time of joining. \n\n- If any UDBAD/Geofake/Invalid call fakes feedback received from customer. I will take the responsibility of reattempting it genuinely on the same day itself. \n\n- I will report to my duties on working day on or before 7:30 AM strictly. \n\n- Dcart has the right to remove from my duties at any point of time without giving notice period. \n\n- In case of my resignation I will inform the company before 15days and will serve a notice period of the same. \n\n- I will abide by the rules & regulations which are provided at the time of joining/Offer letter.]]></string>
+
+
+    <string name="clickToSelect">Click here to select</string>
+
+    <!--MAINTENANCE PAGE-->
+    <string name="maintenance_title">Under Maintenance</string>
+    <string name="maintenance_message_1">We\'re undergoing a bit of scheduled maintenance.</string>
+    <string name="maintenance_message_2">Sorry for the inconvenience,\n We\'ll be back up and running as fast as possible.</string>
+    <!--DEPRECATION PAGE-->
+    <string name="depreciation_title">Unsupported App Version</string>
+    <string name="depreciation_message_1">We no longer support this\n version of the application.</string>
+    <string name="depreciation_message_2">Please update the app from below link.</string>
+    <!--NO INTERNET PAGE-->
+    <string name="no_internet_message_1">Could not connect to the internet.</string>
+    <string name="no_internet_message_2">Please check your network settings.</string>
+    <!--ACCESS REVOKED PAGE-->
+
+
+    <!--LOGIN-->
+
+    <!--PROFILE-->
+    <string name="no_data_message">Runsheets data is not available for selected month</string>
+
+</resources>

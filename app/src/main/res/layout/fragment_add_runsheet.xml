@@ -1,0 +1,294 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".features.runsheets.addRunsheet.AddRunsheetFragment">
+
+    <data>
+
+        <import type="com.dcartlogistics.rider.common.DateUtils" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.dcartlogistics.rider.features.runsheets.addRunsheet.AddRunsheetViewModel" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clProjectDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ivBack"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            android:layout_marginTop="6dp"
+            android:background="@color/colorWhite"
+            android:foreground="?selectableItemBackground"
+            android:paddingVertical="14dp"
+            android:paddingStart="6dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAddNewProjectTitle"
+            style="@style/Text.ActionBar.Title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingHorizontal="?actionBarSize"
+            android:text="Add New Runsheet"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivBack"
+            app:marqueeEnabled='@{true}' />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAddNewProjectTitle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etRunsheetId"
+                    style="@style/Text.B3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14sp"
+                    android:background="@drawable/edit_text_round_gray_empty_background"
+                    android:drawablePadding="16sp"
+                    android:hint="Runsheet ID (minimum 4 digits)"
+                    android:inputType="number"
+                    android:padding="14sp"
+                    android:text="@={viewModel.obsRunsheetId}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/tvContactDetailsTitle"
+                    style="@style/Text.B4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14sp"
+                    android:text="Shipments"
+                    android:textColor="@color/colorGrey500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etRunsheetId" />
+
+                <EditText
+                    android:id="@+id/etOFD"
+                    style="@style/Text.R3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:background="@drawable/edit_text_round_gray_empty_background"
+                    android:hint="OFD"
+                    android:inputType="number"
+                    android:padding="14sp"
+                    android:text="@={viewModel.obsOFD}"
+                    app:layout_constraintEnd_toStartOf="@id/etDelivered"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvContactDetailsTitle" />
+
+                <EditText
+                    android:id="@+id/etDelivered"
+                    style="@style/Text.R3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="8sp"
+                    android:background="@drawable/edit_text_round_gray_empty_background"
+                    android:hint="Delivered"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="14sp"
+                    android:text="@={viewModel.obsDelivered}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/etOFD"
+                    app:layout_constraintTop_toBottomOf="@+id/tvContactDetailsTitle" />
+
+                <TextView
+                    android:id="@+id/tvDescriptionTitle"
+                    style="@style/Text.B4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14sp"
+                    android:text="Remarks / Message (optional)"
+                    android:textColor="@color/colorGrey500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etDelivered" />
+
+                <EditText
+                    android:id="@+id/etRemarks"
+                    style="@style/Text.R4"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="8sp"
+                    android:background="@drawable/edit_text_round_gray_empty_background"
+                    android:gravity="top"
+                    android:hint="Enter here"
+                    android:inputType="textMultiLine"
+                    android:padding="12sp"
+                    android:text="@={viewModel.obsRemarks}"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDescriptionTitle" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cvEstEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground"
+                    android:paddingVertical="8sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etRemarks">
+
+                    <ImageButton
+                        android:id="@+id/ivCalendar"
+                        android:layout_width="38sp"
+                        android:layout_height="38sp"
+                        android:background="@color/colorWhite"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_event_accent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/tvRunsheetDate"
+                        style="@style/Text.B3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16sp"
+                        android:hint="Select Date"
+                        android:text="@{viewModel.obsRunsheetDate ?? @string/clickToSelect}"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivCalendar"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@id/ivCalendar"
+                        app:layout_constraintTop_toTopOf="@id/ivCalendar"
+                        app:marqueeEnabled='@{true}' />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cvTakePicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6sp"
+                    android:layout_marginBottom="24sp"
+                    android:animateLayoutChanges="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground"
+                    android:paddingVertical="8sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvEstEndDate">
+
+                    <ImageButton
+                        android:id="@+id/ivDispatchPic"
+                        android:layout_width="38sp"
+                        android:layout_height="38sp"
+                        android:background="@color/colorWhite"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_camera"
+                        android:tint="@color/colorAccent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvDispatchTitle"
+                        style="@style/Text.B3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Runsheet Image"
+                        android:textColor="@color/colorGrey500"
+                        app:layout_constraintBottom_toBottomOf="@id/ivDispatchPic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/ivDispatchImageCaptured"
+                        app:layout_constraintTop_toTopOf="@+id/ivDispatchPic"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        app:layout_goneMarginStart="16dp"
+                        app:marqueeEnabled='@{true}' />
+
+                    <ImageButton
+                        android:id="@+id/ivDispatchImageCaptured"
+                        android:layout_width="24dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@color/colorWhite"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_tick_24"
+                        android:tint="@color/colorPrimary"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvDispatchTitle"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintStart_toEndOf="@+id/ivDispatchPic"
+                        app:layout_constraintTop_toTopOf="@+id/tvDispatchTitle"
+                        app:layout_goneMarginStart="16dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvCreateProject"
+                    style="@style/Text.B3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_text_round_gray_empty_background"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="12sp"
+                    android:text="Save runsheet"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintTop_toBottomOf="@id/cvTakePicture" />
+
+                <ProgressBar
+                    android:id="@+id/pbIsDataLoading"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:elevation="8dp"
+                    android:visibility='@{viewModel.obsIsDataLoading == true ? View.VISIBLE : View.GONE}'
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="gone" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

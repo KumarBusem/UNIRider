@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".features.salary.SalaryFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.dcartlogistics.rider.features.salary.SalaryViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECF6EF"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_dateYearTitle"
+            style="@style/Text.B3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20sp"
+            android:text="Salary Details"
+            android:textColor="#424A49"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cycleTag"
+            style="@style/Text.R4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amounts credited in your account every month"
+            android:textColor="#676767"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@id/tv_dateYearTitle"
+            app:layout_constraintTop_toBottomOf="@id/tv_dateYearTitle" />
+
+        <ProgressBar
+            android:id="@+id/progressBarBankUpdate"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginEnd="20dp"
+            android:visibility='@{viewModel.obsIsDataLoading.booleanValue() == true ? View.VISIBLE : View.GONE}'
+            app:layout_constraintBottom_toBottomOf="@id/tv_cycleTag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_dateYearTitle" />
+
+        <ImageView
+            android:id="@+id/logoSendfast"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/icon_sendfast"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srlSalary"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_cycleTag">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSalaryList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadingEdge="vertical"
+                android:requiresFadingEdge="vertical" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

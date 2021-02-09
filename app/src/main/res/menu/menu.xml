@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/selector_home_button"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/salaryFragment"
+        android:icon="@drawable/selector_salary_button"
+        android:title="Salary" />
+
+    <item
+        android:id="@+id/feedbackFragment"
+        android:icon="@drawable/selector_feedback_button"
+        android:title="Feedback" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/selector_profile_button"
+        android:title="Profile" />
+
+</menu>

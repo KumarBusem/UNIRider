@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".features.login.LoginFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.dcartlogistics.rider.features.login.LoginViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:ignore="UnusedAttribute">
+
+
+        <ProgressBar
+            android:id="@+id/pbIsDataLoading"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:elevation="8dp"
+            android:visibility='@{viewModel.obsIsDataLoading == true ? View.VISIBLE : View.GONE}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_sendfast"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/icon_sendfast"
+            app:layout_constraintBottom_toTopOf="@id/clLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_sendfast">
+
+            <TextView
+                android:id="@+id/tvLoginMessage1"
+                style="@style/Text.B2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="32dp"
+                android:text="Login"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edit_text_round_gray_empty_background"
+                android:drawableStart="@drawable/ic_person_black_24dp"
+                android:drawablePadding="16dp"
+                android:drawableTint="@color/colorPrimary"
+                android:elevation="0dp"
+                android:hint="Username"
+                android:importantForAutofill="yes"
+                android:inputType="textCapCharacters"
+                android:padding="14dp"
+                android:textColorHint="@color/colorGrey300"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLoginMessage1" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edit_text_round_gray_empty_background"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="16dp"
+                android:drawableTint="@color/colorPrimary"
+                android:elevation="0dp"
+                android:hint="password"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="yes"
+                android:inputType="textPassword"
+                android:padding="14dp"
+                android:textColorHint="@color/colorGrey300"
+                app:layout_constraintEnd_toEndOf="@+id/etUserName"
+                app:layout_constraintStart_toStartOf="@+id/etUserName"
+                app:layout_constraintTop_toBottomOf="@id/etUserName" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                style="@style/Text.R4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="22dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:elevation="32dp"
+                android:paddingHorizontal="36dp"
+                android:paddingVertical="9dp"
+                android:text="Login"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="32dp"
+                app:layout_constraintEnd_toEndOf="@id/etUserName"
+                app:layout_constraintStart_toStartOf="@id/etUserName"
+                app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

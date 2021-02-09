@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.dcartlogistics.data.models.Runsheet" />
+
+        <variable
+            name="data"
+            type="com.dcartlogistics.data.models.Runsheet" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_runsheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:elevation="1dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingBottom="13dp">
+
+        <TextView
+            android:id="@+id/tv_ID"
+            style="@style/Text.R4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="@{@string/rid + data.id}"
+            android:textColor="@color/colorGrey700"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="RID:000373737" />
+
+        <TextView
+            android:id="@+id/tvDateTime"
+            style="@style/Text.R4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@{data.date}"
+            android:textColor="@color/colorGrey700"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_ID"
+            tools:text="22-22-2020" />
+
+        <TextView
+            android:id="@+id/tvShipmentHeading"
+            style="@style/Text.R4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Shipments"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_ID"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_pickup"
+            style="@style/Text.R3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/ofd + ' ' + data.ofd}"
+            android:textColor="@color/colorPrimaryGreenDark"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvShipmentHeading"
+            tools:text="Ofd 46" />
+
+        <TextView
+            android:id="@+id/tvShipment2Heading"
+            style="@style/Text.R4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Shipments"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_pickup"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_pickup2"
+            style="@style/Text.R3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/delivered + ' ' + data.delivered}"
+            android:textColor="@color/colorPrimaryGreenDark"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvShipment2Heading"
+            tools:text="Deliered 39" />
+
+        <TextView
+            android:id="@+id/tvStatusHeading"
+            style="@style/Text.R4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvShipmentHeading"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/Text.R3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="@{data.status}"
+            android:textColor='@{data.status.equals(data.RUNSHEET_STATUS_VERIFIED) ? @color/colorGrey700 : @color/colorPrimaryGreenDark}'
+            app:layout_constraintEnd_toEndOf="@id/tvStatusHeading"
+            app:layout_constraintTop_toBottomOf="@id/tvStatusHeading"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="INPROGRESS" />
+
+        <TextView
+            android:id="@+id/tvStatus2Heading"
+            style="@style/Text.R4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Conversion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvShipment2Heading"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tvConversion"
+            style="@style/Text.R3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/colorPrimaryGreenDark"
+            app:layout_constraintEnd_toEndOf="@id/tvStatusHeading"
+            app:layout_constraintTop_toBottomOf="@id/tvStatus2Heading"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="69%" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

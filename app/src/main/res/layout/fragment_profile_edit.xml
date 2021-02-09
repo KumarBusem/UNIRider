@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".features.profile.editProfile.ProfileEditFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.dcartlogistics.rider.features.profile.editProfile.ProfileEditViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clProjectDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ivBack"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorWhite"
+            android:foreground="?selectableItemBackground"
+            android:paddingVertical="14dp"
+            android:paddingStart="6dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAddNewProjectTitle"
+            style="@style/Text.ActionBar.Title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingHorizontal="?actionBarSize"
+            android:text="Edit Profile"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivBack"
+            app:marqueeEnabled='@{true}' />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAddNewProjectTitle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAadharTitle"
+                    style="@style/Text.B4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="14dp"
+                    android:text="Aadhar Number"
+                    android:textColor="@color/colorGrey500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/etAadhar"
+                    style="@style/Text.R3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_round_gray_empty_background"
+                    android:digits="1234567890"
+                    android:drawablePadding="16dp"
+                    android:hint="12 Digits"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:padding="14dp"
+                    android:text="@={viewModel.obsAadhar}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAadharTitle"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/tvPanTitle"
+                    style="@style/Text.B4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="14dp"
+                    android:text="Pancard Number"
+                    android:textColor="@color/colorGrey500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etAadhar" />
+
+                <EditText
+                    android:id="@+id/etPan"
+                    style="@style/Text.R3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_round_gray_empty_background"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                    android:drawablePadding="16dp"
+                    android:hint="10 Characters"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="10"
+                    android:padding="14dp"
+                    android:text="@={viewModel.obsPan}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPanTitle"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/tvAccountTitle"
+                    style="@style/Text.B4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="14dp"
+                    android:text="Account Number"
+                    android:textColor="@color/colorGrey500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etPan" />
+
+                <EditText
+                    android:id="@+id/etAccount"
+                    style="@style/Text.R3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text_round_gray_empty_background"
+                    android:digits="1234567890"
+                    android:hint="Bank account"
+                    android:inputType="number"
+                    android:padding="14dp"
+                    android:text="@={viewModel.obsAccount}"
+                    app:layout_constraintEnd_toStartOf="@id/etIFSC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAccountTitle" />
+
+                <TextView
+                    android:id="@+id/tvIfscTitle"
+                    style="@style/Text.B4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="14dp"
+                    android:text="IFSC Code"
+                    android:textColor="@color/colorGrey500"
+                    app:layout_constraintStart_toStartOf="@id/etIFSC"
+                    app:layout_constraintTop_toBottomOf="@+id/etPan" />
+
+                <EditText
+                    android:id="@+id/etIFSC"
+                    style="@style/Text.R3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text_round_gray_empty_background"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                    android:hint="IFSC"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="11"
+                    android:padding="14dp"
+                    android:text="@={viewModel.obsIFSC}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/etAccount"
+                    app:layout_constraintTop_toBottomOf="@+id/tvIfscTitle" />
+
+                <TextView
+                    android:id="@+id/tvEmailTitle"
+                    style="@style/Text.B4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="14dp"
+                    android:text="Email"
+                    android:textColor="@color/colorGrey500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etAccount" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    style="@style/Text.R3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_round_gray_empty_background"
+                    android:drawablePadding="16dp"
+                    android:hint="Enter here"
+                    android:inputType="textEmailAddress"
+                    android:padding="14dp"
+                    android:text="@={viewModel.obsEmail}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvEmailTitle"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/tvPhoneTitle"
+                    style="@style/Text.B4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="14dp"
+                    android:text="Phone Number"
+                    android:textColor="@color/colorGrey500"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    style="@style/Text.R3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_round_gray_empty_background"
+                    android:digits="1234567890"
+                    android:drawablePadding="16dp"
+                    android:hint="Enter here"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:padding="14dp"
+                    android:text="@={viewModel.obsAlternate}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPhoneTitle"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/btnSave"
+                    style="@style/Text.B3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp"
+                    android:layout_marginBottom="14sp"
+                    android:background="@drawable/edit_text_round_gray_empty_background"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="13sp"
+                    android:text="Save"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintTop_toBottomOf="@id/etPhone" />
+
+                <ProgressBar
+                    android:id="@+id/pbIsDataLoading"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:elevation="8dp"
+                    android:visibility='@{viewModel.obsIsDataLoading == true ? View.VISIBLE : View.GONE}'
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="gone" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,3 @@
+rootProject.name='UNIRider'
+include ':app'
+include ':data'

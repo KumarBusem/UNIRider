@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "920424448726",
+    "firebase_url": "https://rider-3c71e.firebaseio.com",
+    "project_id": "rider-3c71e",
+    "storage_bucket": "rider-3c71e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920424448726:android:c826996a43231934d8bf77",
+        "android_client_info": {
+          "package_name": "com.dcart.data"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920424448726-3d2kpas0ckhraulkqnbge2qmqdea01o7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnOnn8kdKYPqhe5Um5zK38CikmhaT0ULw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920424448726-3d2kpas0ckhraulkqnbge2qmqdea01o7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920424448726:android:128d0525e9a63e1ad8bf77",
+        "android_client_info": {
+          "package_name": "com.dcart.sendfast"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920424448726-3d2kpas0ckhraulkqnbge2qmqdea01o7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnOnn8kdKYPqhe5Um5zK38CikmhaT0ULw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920424448726-3d2kpas0ckhraulkqnbge2qmqdea01o7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920424448726:android:128d0525e9a63e1ad8bf77",
+        "android_client_info": {
+          "package_name": "com.dcart.sendfast.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920424448726-3d2kpas0ckhraulkqnbge2qmqdea01o7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnOnn8kdKYPqhe5Um5zK38CikmhaT0ULw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920424448726-3d2kpas0ckhraulkqnbge2qmqdea01o7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

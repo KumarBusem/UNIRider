@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".features.runsheets.runsheetsList.RunsheetsFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.dcartlogistics.rider.features.runsheets.runsheetsList.RunsheetsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECF6EF"
+        tools:ignore="UnusedAttribute">
+
+        <ImageButton
+            android:id="@+id/ivBack"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="#ECF6EF"
+            android:foreground="?selectableItemBackground"
+            android:paddingVertical="14dp"
+            android:paddingStart="6dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:tint="#2E363C"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRunsheetHeading"
+            style="@style/Text.B2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="May 2020 Runsheets"
+            android:textColor="#2E363C"
+            android:textSize="19dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivBack"
+            app:layout_constraintStart_toEndOf="@id/ivBack"
+            app:layout_constraintTop_toTopOf="@id/ivBack" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_pickup"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginEnd="20sp"
+            android:visibility='@{viewModel.obsIsDataLoading.booleanValue() == true ? View.VISIBLE : View.GONE}'
+            app:layout_constraintBottom_toBottomOf="@id/tvRunsheetHeading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvRunsheetHeading" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srlRunsheets"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivBack">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRunsheetsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadingEdge="vertical"
+                android:requiresFadingEdge="vertical"
+                tools:listitem="@layout/item_runsheet" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
