@@ -21,97 +21,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ECF6EF"
             tools:ignore="UnusedAttribute">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvProfileDetails"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="23dp"
-                app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:foreground="?selectableItemBackground"
-                    android:orientation="horizontal"
-                    android:padding="8sp">
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/mcvProfilePic"
-                        android:layout_width="50sp"
-                        android:layout_height="50sp"
-                        android:foreground="?selectableItemBackground"
-                        app:cardCornerRadius="25sp"
-                        app:cardElevation="0dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:strokeColor="@color/milky_white"
-                        app:strokeWidth="2dp">
-
-                        <ImageView
-                            android:id="@+id/ivProfilePic"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/default_profile"
-                            android:scaleType="centerCrop"
-                            tools:src="@drawable/default_profile" />
-
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <TextView
-                        android:id="@+id/tvName"
-                        style="@style/Text.B3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:maxLines="1"
-                        android:text='@{viewModel.obsUser.name ?? @string/n_a}'
-                        android:textColor="#2E363C"
-                        android:textSize="17sp"
-                        app:layout_constraintBottom_toTopOf="@id/tvRole"
-                        app:layout_constraintEnd_toStartOf="@id/ivProfileArrow"
-                        app:layout_constraintStart_toEndOf="@id/mcvProfilePic"
-                        app:layout_constraintTop_toTopOf="@id/mcvProfilePic"
-                        app:layout_constraintVertical_chainStyle="packed"
-                        tools:text="Casey Neistat fdfd ssss   ff f f ee eeeee" />
-
-                    <TextView
-                        android:id="@+id/tvRole"
-                        style="@style/Text.R3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="3dp"
-                        android:gravity="center"
-                        android:text='@{viewModel.obsUser.sf_id ?? @string/n_a}'
-                        android:textColor="@color/colorAccent"
-                        android:textSize="13sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="@id/tvName"
-                        app:layout_constraintTop_toBottomOf="@+id/tvName"
-                        app:layout_constraintVertical_chainStyle="packed"
-                        tools:text="SFSFR000007" />
-
-                    <ImageView
-                        android:id="@+id/ivProfileArrow"
-                        android:layout_width="26sp"
-                        android:layout_height="26sp"
-                        android:layout_marginEnd="8sp"
-                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/colorGrey700" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardDateLayout"
@@ -122,12 +34,11 @@
                 android:foreground="?selectableItemBackground"
                 app:cardCornerRadius="10sp"
                 app:cardElevation="23dp"
-                app:layout_constraintTop_toBottomOf="@id/cvProfileDetails">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
                     android:foreground="?selectableItemBackground"
                     android:orientation="horizontal">
 
@@ -167,7 +78,7 @@
                             android:src="@drawable/ic_baseline_date_range_24"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:tint="@color/colorPrimaryGreenDark" />
+                            app:tint="@color/colorGrey300" />
 
                         <TextView
                             android:id="@+id/tvDate"
@@ -177,7 +88,7 @@
                             android:layout_centerVertical="true"
                             android:layout_marginStart="14dp"
                             android:text="May 2022"
-                            android:textColor="#2E363C"
+                            android:textColor="#D2D8DC"
                             android:textSize="21sp"
                             app:layout_constraintBottom_toBottomOf="@id/ivCalendar"
                             app:layout_constraintStart_toEndOf="@id/ivCalendar"
@@ -190,7 +101,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="2sp"
                         android:layout_marginHorizontal="12dp"
-                        android:background="#ECF6EF"
+                        android:background="#7A7A7A"
                         android:orientation="horizontal"
                         app:layout_constraintTop_toBottomOf="@id/cvDateLayout" />
 
@@ -199,7 +110,6 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:background="@color/white"
                         android:orientation="horizontal"
                         android:paddingVertical="18sp"
                         app:layout_constraintEnd_toStartOf="@id/cvDelivered"
@@ -224,7 +134,7 @@
                             android:layout_marginStart="14dp"
                             android:maxLines="1"
                             android:text="Total OFD"
-                            android:textColor="@color/colorGrey700"
+                            android:textColor="@color/colorGrey300"
                             android:textSize="13sp"
                             app:layout_constraintBottom_toTopOf="@id/tvOFDValue"
                             app:layout_constraintStart_toEndOf="@id/ivOFD"
@@ -237,7 +147,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="14dp"
                             android:maxLines="1"
-                            android:textColor="@color/colorGrey700"
+                            android:textColor="@color/colorGrey300"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="@id/ivOFD"
                             app:layout_constraintStart_toEndOf="@id/ivOFD"
@@ -250,7 +160,6 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-                        android:background="@color/white"
                         android:orientation="horizontal"
                         android:paddingVertical="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -275,7 +184,7 @@
                             android:layout_marginStart="14dp"
                             android:maxLines="1"
                             android:text="Total Delivered"
-                            android:textColor="@color/colorGrey700"
+                            android:textColor="@color/colorGrey300"
                             android:textSize="13sp"
                             app:layout_constraintBottom_toTopOf="@id/tvDeliveredValue"
                             app:layout_constraintStart_toEndOf="@id/ivDelivered"
@@ -288,7 +197,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="14dp"
                             android:maxLines="1"
-                            android:textColor="@color/colorGrey700"
+                            android:textColor="@color/colorGrey300"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="@id/ivDelivered"
                             app:layout_constraintStart_toEndOf="@id/ivDelivered"
@@ -296,60 +205,12 @@
                             tools:text="253" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cv_conversion"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:background="@color/white"
-                        android:foreground="?selectableItemBackground"
-                        android:orientation="horizontal"
-                        app:layout_constraintTop_toBottomOf="@id/btnRunsheets">
 
-                        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
-                            android:id="@+id/pb_conversion"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:elevation="0dp"
-                            app:cardElevation="0dp"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:rcBackgroundColor="#D5ECDD"
-                            app:rcBackgroundPadding="4sp"
-                            app:rcMax="100.0"
-                            app:rcProgress="65.0"
-                            app:rcProgressColor="#71D8C4"
-                            app:rcRadius="10dp" />
-
-                        <TextView
-                            style="@style/Text.B4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:text="Conversion"
-                            android:textColor="@color/white"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/tvConversion"
-                            style="@style/Text.R3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="20dp"
-                            android:text="65%"
-                            android:textColor="@color/colorGrey700"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/btnRunsheets"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/white"
                         android:foreground="?selectableItemBackground"
                         android:orientation="horizontal"
                         android:padding="16sp"
@@ -372,7 +233,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:tint="@color/colorPrimaryGreenDark" />
+                            app:tint="@color/colorGrey300" />
 
                         <TextView
                             android:id="@+id/tvRunsheetsForSelectedMonth"
@@ -382,7 +243,7 @@
                             android:layout_centerVertical="true"
                             android:layout_marginStart="14dp"
                             android:text="Selected month runsheets"
-                            android:textColor="@color/colorGrey700"
+                            android:textColor="@color/colorGrey300"
                             android:textSize="17sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toEndOf="@id/ivRunsheets"
@@ -421,7 +282,6 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
                     android:foreground="?selectableItemBackground"
                     android:orientation="horizontal"
                     android:padding="16sp">
@@ -434,7 +294,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="@color/colorPrimaryGreenDark" />
+                        app:tint="@color/colorGrey300" />
 
                     <ImageView
                         android:layout_width="24sp"
@@ -450,13 +310,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_marginStart="14dp"
+                        android:layout_marginStart="16dp"
                         android:text="Add Runsheet"
-                        android:textColor="@color/colorGrey700"
+                        android:textColor="@color/colorGrey300"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/ivAddRunsheet"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.515" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>

@@ -20,40 +20,17 @@
         android:background="#ECF6EF"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv_dateYearTitle"
-            style="@style/Text.B3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="20sp"
-            android:text="Salary Details"
-            android:textColor="#424A49"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_cycleTag"
-            style="@style/Text.R4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Amounts credited in your account every month"
-            android:textColor="#676767"
-            android:textSize="13sp"
-            app:layout_constraintStart_toStartOf="@id/tv_dateYearTitle"
-            app:layout_constraintTop_toBottomOf="@id/tv_dateYearTitle" />
 
         <ProgressBar
             android:id="@+id/progressBarBankUpdate"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_marginEnd="20dp"
             android:visibility='@{viewModel.obsIsDataLoading.booleanValue() == true ? View.VISIBLE : View.GONE}'
-            app:layout_constraintBottom_toBottomOf="@id/tv_cycleTag"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tv_dateYearTitle" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <ImageView
             android:id="@+id/logoSendfast"
@@ -71,11 +48,10 @@
             android:id="@+id/srlSalary"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_cycleTag">
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvSalaryList"

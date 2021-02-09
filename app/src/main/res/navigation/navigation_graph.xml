@@ -93,12 +93,12 @@
         android:id="@+id/runsheetsFragment"
         android:name="com.uni.rider.features.runsheets.runsheetsList.RunsheetsFragment"
         android:label="Runsheets"
-        tools:layout="@layout/fragment_runsheets"></fragment>
+        tools:layout="@layout/fragment_runsheets" />
 
     <fragment
         android:id="@+id/salaryFragment"
         android:name="com.uni.rider.features.salary.SalaryFragment"
-        android:label="Salary"
+        android:label="Salary Details"
         tools:layout="@layout/fragment_salary" />
 
     <fragment

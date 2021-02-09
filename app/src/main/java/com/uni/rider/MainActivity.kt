@@ -8,10 +8,15 @@ import android.content.pm.ActivityInfo
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.Navigation
-import androidx.navigation.ui.NavigationUI
+import androidx.navigation.findNavController
+import androidx.navigation.ui.*
+import com.google.android.material.navigation.NavigationView
 import com.uni.rider.common.*
 import com.uni.data.dataSources.definitions.DataSourceFirestore
 import com.uni.data.dataSources.repos.RepoFirestore
@@ -24,17 +29,23 @@ import io.github.inflationx.calligraphy3.CalligraphyInterceptor
 import io.github.inflationx.viewpump.ViewPump
 import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.partial_blocked_version.view.*
 
 class MainActivity : AppCompatActivity() {
 
-    protected val repoFirestore: DataSourceFirestore by lazy { RepoFirestore() }
+    private val repoFirestore: DataSourceFirestore by lazy { RepoFirestore() }
+    private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setupNavigation()
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        setUpNavigation()
 
         getAppSettings()
 
@@ -48,6 +59,26 @@ class MainActivity : AppCompatActivity() {
                 ).build())
 
         ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+    }
+
+    private fun setUpNavigation() {
+        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+        val navView: NavigationView = findViewById(R.id.nav_view)
+        val navController = findNavController(R.id.nav_host_fragment)
+
+        appBarConfiguration = AppBarConfiguration(setOf(
+                R.id.homeFragment), drawerLayout)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
+    }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+//        menuInflater.inflate(R.menu.main2, menu)
+        return true
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment)
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
     private fun getAppSettings() {
@@ -69,16 +100,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setupNavigation() {
-        val navController = Navigation.findNavController(this, R.id.mainNavigationFragmentLicker)
-        NavigationUI.setupWithNavController(bottomNavigationViewLicker, navController)
-    }
-
-    override fun onSupportNavigateUp() = Navigation.findNavController(this, R.id.mainNavigationFragmentLicker).navigateUp()
-
     fun setBottomBarVisibility(shouldDisplay: Boolean) {
-        if (shouldDisplay) bottomNavigationViewLicker?.visibility =
-                View.VISIBLE else bottomNavigationViewLicker?.visibility = View.GONE
+
     }
 
     private val networkReceiver = object : BroadcastReceiver() {
