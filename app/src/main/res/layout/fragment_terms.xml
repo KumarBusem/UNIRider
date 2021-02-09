@@ -8,17 +8,6 @@
     tools:context="com.uni.rider.features.splash.SplashFragment"
     tools:ignore="ContentDescription">
 
-    <ImageView
-        android:id="@+id/iv_sendfast"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="10dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/icon_sendfast"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvHeading"
@@ -30,7 +19,7 @@
         android:layout_marginBottom="10dp"
         android:text="@string/declaration_heading"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@id/iv_sendfast" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -64,10 +53,7 @@
         android:id="@+id/accepted"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginHorizontal="14dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginBottom="14dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryGreenDark"
         android:elevation="5dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent">

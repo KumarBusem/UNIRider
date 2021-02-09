@@ -3,22 +3,37 @@
 
     <item
         android:id="@+id/homeFragment"
-        android:icon="@drawable/selector_home_button"
+        android:icon="@drawable/icon_home"
         android:title="Home" />
 
     <item
         android:id="@+id/salaryFragment"
-        android:icon="@drawable/selector_salary_button"
+        android:icon="@drawable/icon_salary"
         android:title="Salary" />
 
     <item
         android:id="@+id/feedbackFragment"
-        android:icon="@drawable/selector_feedback_button"
+        android:icon="@drawable/heart"
         android:title="Feedback" />
 
     <item
         android:id="@+id/profileFragment"
-        android:icon="@drawable/selector_profile_button"
+        android:icon="@drawable/icon_pofile"
         android:title="My Profile" />
+
+    <item
+        android:id="@+id/termsFragment"
+        android:icon="@drawable/icon_service"
+        android:title="Terms" />
+
+    <item
+        android:id="@+id/helpFragment"
+        android:icon="@drawable/ic_baseline_help_outline_24"
+        android:title="Support" />
+
+    <item
+        android:id="@+id/btnLogout"
+        android:icon="@drawable/icon_logout"
+        android:title="Logout" />
 
 </menu>

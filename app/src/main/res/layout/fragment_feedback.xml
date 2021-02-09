@@ -21,32 +21,6 @@
         android:background="#ECF6EF"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv_dateYearTitle"
-            style="@style/Text.B3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="20sp"
-            android:text="Customer Feedback"
-            android:textColor="#424A49"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@id/tv_cycleTag"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <TextView
-            android:id="@+id/tv_cycleTag"
-            style="@style/Text.R4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Please enter customer order details"
-            android:textColor="#838383"
-            app:layout_constraintBottom_toBottomOf="@id/btnAddFeedback"
-            app:layout_constraintStart_toStartOf="@id/tv_dateYearTitle"
-            app:layout_constraintTop_toBottomOf="@id/tv_dateYearTitle" />
-
         <ProgressBar
             android:id="@+id/progressBarBankUpdate"
             android:layout_width="30dp"
@@ -54,26 +28,11 @@
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginEnd="5dp"
             android:visibility='@{viewModel.obsIsDataLoading.booleanValue() == true ? View.VISIBLE : View.GONE}'
-            app:layout_constraintBottom_toBottomOf="@id/btnAddFeedback"
-            app:layout_constraintEnd_toStartOf="@id/btnAddFeedback"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/btnAddFeedback" />
 
-        <ImageButton
-            android:id="@+id/btnAddFeedback"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="18dp"
-            android:background="#ECF6EF"
-            android:foreground="?selectableItemBackground"
-            android:padding="3dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/icon_add_accent"
-            android:tint="@color/colorAccent"
-            app:layout_constraintBottom_toBottomOf="@id/tv_cycleTag"
-            app:layout_constraintCircleRadius="20dp"
-            app:layout_constraintDimensionRatio="1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tv_dateYearTitle" />
+
 
         <ImageView
             android:id="@+id/logoSendfast"
@@ -90,12 +49,11 @@
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/srlFeedbacks"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="14sp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_cycleTag">
+            app:layout_constraintStart_toStartOf="parent">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvFeedbacksList"
@@ -105,5 +63,25 @@
                 android:requiresFadingEdge="vertical"
                 tools:listitem="@layout/item_feedback" />
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="60sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/btnAddFeedback"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="34sp"
+            app:cardElevation="16sp"
+            app:cardCornerRadius="31sp"
+            android:layout_height="60sp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="?selectableItemBackground"
+                android:padding="10sp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_add_24"
+                app:layout_constraintDimensionRatio="1"
+                app:tint="@color/colorAccent" />
+        </com.google.android.material.card.MaterialCardView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
