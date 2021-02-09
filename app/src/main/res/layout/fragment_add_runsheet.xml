@@ -5,13 +5,13 @@
 
     <data>
 
-        <import type="com.dcartlogistics.rider.common.DateUtils" />
+        <import type="com.uni.rider.common.DateUtils" />
 
         <import type="android.view.View" />
 
         <variable
             name="viewModel"
-            type="com.dcartlogistics.rider.features.runsheets.addRunsheet.AddRunsheetViewModel" />
+            type="com.uni.rider.features.runsheets.addRunsheet.AddRunsheetViewModel" />
 
     </data>
 

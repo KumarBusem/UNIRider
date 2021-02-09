@@ -1,13 +1,13 @@
-package com.dcartlogistics.data.dataSources.definitions
+package com.uni.data.dataSources.definitions
 
-import com.dcartlogistics.data.dataSources.repos.RepoSharedPreferences
-import com.dcartlogistics.data.internal.common.MyApi
-import com.dcartlogistics.data.BuildConfig
-import com.dcartlogistics.data.internal.common.SafeApiRequest
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import com.uni.data.BuildConfig
+import com.uni.data.dataSources.repos.RepoSharedPreferences
+import com.uni.data.internal.common.MyApi
+import com.uni.data.internal.common.SafeApiRequest
 
 abstract class BaseDataSource: SafeApiRequest() {
 

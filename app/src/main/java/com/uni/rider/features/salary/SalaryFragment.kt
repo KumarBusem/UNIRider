@@ -2,9 +2,12 @@ package com.uni.rider.features.salary
 
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.uni.rider.R
 import com.uni.rider.common.BaseAbstractFragment
 import com.uni.rider.common.ViewModelFactory
+import com.uni.rider.common.hide
+import com.uni.rider.common.show
 import com.uni.rider.databinding.FragmentSalaryBinding
 
 class SalaryFragment : BaseAbstractFragment<SalaryViewModel, FragmentSalaryBinding>(R.layout.fragment_salary) {

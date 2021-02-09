@@ -1,5 +1,6 @@
 package com.uni.rider.features.profile.profileDetails
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.util.Log

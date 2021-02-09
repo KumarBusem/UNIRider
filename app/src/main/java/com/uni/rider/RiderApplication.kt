@@ -23,7 +23,7 @@ class RiderApplication : Application() {
 
         FlurryAgent.Builder()
                 .withLogEnabled(true)
-                .build(this, "72MCMGHH4CP8GPMQ3FZC")
+                .build(this, "QXZ9BNCK9KQ2WGZHQ59Q")
     }
 
     companion object {

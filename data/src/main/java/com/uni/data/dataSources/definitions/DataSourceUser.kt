@@ -1,7 +1,7 @@
-package com.dcartlogistics.data.dataSources.definitions
+package com.uni.data.dataSources.definitions
 
-import com.dcartlogistics.data.models.SimpleResponse
-import com.dcartlogistics.data.models.User
+import com.uni.data.models.SimpleResponse
+import com.uni.data.models.User
 import okhttp3.RequestBody
 
 abstract class DataSourceUser : BaseDataSource() {

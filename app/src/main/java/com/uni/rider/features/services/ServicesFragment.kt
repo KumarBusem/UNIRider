@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.uni.rider.R
 import com.uni.rider.common.BaseAbstractFragment
 import com.uni.rider.common.ViewModelFactory
+import com.uni.rider.common.toast
 import com.uni.rider.databinding.FragmentServicesBinding
 
 class ServicesFragment : BaseAbstractFragment<ServicesViewModel, FragmentServicesBinding>(R.layout.fragment_services) {

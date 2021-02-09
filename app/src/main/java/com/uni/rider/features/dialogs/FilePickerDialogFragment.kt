@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import com.uni.rider.R
+import com.uni.rider.common.show
 import com.uni.rider.databinding.FragmentFilePickerDialogBinding
 import com.uni.rider.features.dialogs.FilePickerDialogFragment.Companion.FILE_TYPES.CAMERA
 import com.uni.rider.features.dialogs.FilePickerDialogFragment.Companion.FILE_TYPES.GALLERY

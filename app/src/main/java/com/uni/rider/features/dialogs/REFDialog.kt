@@ -12,6 +12,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import com.uni.rider.R
+import com.uni.rider.common.disable
+import com.uni.rider.common.enableIf
+import com.uni.rider.common.hide
+import com.uni.rider.common.show
 import com.uni.rider.databinding.DialogRefBinding
 
 

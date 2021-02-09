@@ -12,7 +12,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
-import com.dcartlogistics.rider.common.*
+import com.uni.rider.common.*
 import com.uni.data.dataSources.definitions.DataSourceFirestore
 import com.uni.data.dataSources.repos.RepoFirestore
 import com.uni.rider.common.hide

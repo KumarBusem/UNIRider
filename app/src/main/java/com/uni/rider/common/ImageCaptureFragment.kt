@@ -1,4 +1,4 @@
-package com.dcartlogistics.rider.common
+package com.uni.rider.common
 
 import android.content.Intent
 import android.graphics.Bitmap

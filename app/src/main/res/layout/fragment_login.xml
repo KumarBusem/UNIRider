@@ -10,7 +10,7 @@
 
         <variable
             name="viewModel"
-            type="com.dcartlogistics.rider.features.login.LoginViewModel" />
+            type="com.uni.rider.features.login.LoginViewModel" />
 
     </data>
 

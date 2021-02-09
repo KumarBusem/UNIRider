@@ -1,4 +1,4 @@
-package com.dcartlogistics.rider.common
+package com.uni.rider.common
 
 import android.content.Context
 import android.widget.Toast
@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import com.dcartlogistics.data.dataSources.definitions.DataSourceSharedPreferences
-import com.dcartlogistics.data.dataSources.repos.RepoSharedPreferences
-import com.dcartlogistics.rider.MainActivity
+import com.uni.data.dataSources.definitions.DataSourceSharedPreferences
+import com.uni.data.dataSources.repos.RepoSharedPreferences
+import com.uni.rider.MainActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

@@ -10,7 +10,7 @@
 
         <variable
             name="viewModel"
-            type="com.dcartlogistics.rider.features.runsheets.runsheetsList.RunsheetsViewModel" />
+            type="com.uni.rider.features.runsheets.runsheetsList.RunsheetsViewModel" />
 
     </data>
 

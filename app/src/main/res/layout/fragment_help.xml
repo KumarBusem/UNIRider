@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.dcartlogistics.rider.features.help.HelpViewModel" />
+            type="com.uni.rider.features.help.HelpViewModel" />
 
     </data>
 

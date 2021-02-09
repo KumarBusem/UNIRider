@@ -5,11 +5,11 @@
 
     <data>
 
-        <import type="com.dcartlogistics.data.models.Runsheet" />
+        <import type="com.uni.data.models.Runsheet" />
 
         <variable
             name="data"
-            type="com.dcartlogistics.data.models.Runsheet" />
+            type="com.uni.data.models.Runsheet" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

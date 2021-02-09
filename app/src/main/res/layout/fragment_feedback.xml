@@ -10,7 +10,7 @@
 
         <variable
             name="viewModel"
-            type="com.dcartlogistics.rider.features.feedback.FeedbackViewModel" />
+            type="com.uni.rider.features.feedback.FeedbackViewModel" />
     </data>
 
 

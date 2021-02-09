@@ -2,9 +2,11 @@ package com.uni.rider.features.feedback
 
 import android.annotation.SuppressLint
 import android.location.Location
+import android.os.Build
 import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.uni.rider.R
 import com.uni.rider.common.*
 import com.uni.rider.databinding.FragmentFeedbackBinding

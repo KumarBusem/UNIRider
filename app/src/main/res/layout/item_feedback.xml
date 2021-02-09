@@ -5,14 +5,14 @@
 
     <data>
 
-        <import type="com.dcartlogistics.data.models.Feedback" />
+        <import type="com.uni.data.models.Feedback" />
 
 
-        <import type="com.dcartlogistics.rider.common.DateUtils" />
+        <import type="com.uni.rider.common.DateUtils" />
 
         <variable
             name="data"
-            type="com.dcartlogistics.data.models.Feedback" />
+            type="com.uni.data.models.Feedback" />
     </data>
 
 

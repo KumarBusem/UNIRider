@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.dcartlogistics.data.models.Feedback
-import com.dcartlogistics.rider.databinding.ItemFeedbackBinding
+import com.uni.data.models.Feedback
+import com.uni.rider.databinding.ItemFeedbackBinding
 
 class FeedbackListAdapter : ListAdapter<Feedback, FeedbackListAdapter.FeedbackViewHolder>(DIFF_UTILS) {
 

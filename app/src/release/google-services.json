@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "40420207386",
-    "firebase_url": "https://sendfast-rider-2021.firebaseio.com",
-    "project_id": "sendfast-rider-2021",
-    "storage_bucket": "sendfast-rider-2021.appspot.com"
+    "project_number": "46954291852",
+    "firebase_url": "https://uni-rider-2021.firebaseio.com",
+    "project_id": "uni-rider-2021",
+    "storage_bucket": "uni-rider-2021.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:40420207386:android:77cdbf0245a44e1a1d9aa3",
+        "mobilesdk_app_id": "1:46954291852:android:0b46df20d188b07a38d1a9",
         "android_client_info": {
-          "package_name": "com.dcartlogistics.data"
+          "package_name": "com.uni.data"
         }
       },
       "oauth_client": [
         {
-          "client_id": "40420207386-vufcqngd6olsbc2icsh1fglj2h88bh6e.apps.googleusercontent.com",
+          "client_id": "46954291852-9ppnlu2220b5t5oppesqd7fjjkcv7fdk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB7ljL8g3JBVy7lvX3i_n6RWYTmVDhl5rI"
+          "current_key": "AIzaSyA_sO-YjRWglj0nsqZCDGDVK043HWebyOI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "40420207386-vufcqngd6olsbc2icsh1fglj2h88bh6e.apps.googleusercontent.com",
+              "client_id": "46954291852-9ppnlu2220b5t5oppesqd7fjjkcv7fdk.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -37,27 +37,27 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:40420207386:android:295acf37c975262e1d9aa3",
+        "mobilesdk_app_id": "1:46954291852:android:125ab1403437611538d1a9",
         "android_client_info": {
-          "package_name": "com.dcartlogistics.rider"
+          "package_name": "com.uni.rider"
         }
       },
       "oauth_client": [
         {
-          "client_id": "40420207386-vufcqngd6olsbc2icsh1fglj2h88bh6e.apps.googleusercontent.com",
+          "client_id": "46954291852-9ppnlu2220b5t5oppesqd7fjjkcv7fdk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB7ljL8g3JBVy7lvX3i_n6RWYTmVDhl5rI"
+          "current_key": "AIzaSyA_sO-YjRWglj0nsqZCDGDVK043HWebyOI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "40420207386-vufcqngd6olsbc2icsh1fglj2h88bh6e.apps.googleusercontent.com",
+              "client_id": "46954291852-9ppnlu2220b5t5oppesqd7fjjkcv7fdk.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -66,27 +66,27 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:40420207386:android:295acf37c975262e1d9aa3",
+        "mobilesdk_app_id": "1:46954291852:android:125ab1403437611538d1a9",
         "android_client_info": {
-          "package_name": "com.dcartlogistics.rider.dev"
+          "package_name": "com.uni.rider.dev"
         }
       },
       "oauth_client": [
         {
-          "client_id": "40420207386-vufcqngd6olsbc2icsh1fglj2h88bh6e.apps.googleusercontent.com",
+          "client_id": "46954291852-9ppnlu2220b5t5oppesqd7fjjkcv7fdk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB7ljL8g3JBVy7lvX3i_n6RWYTmVDhl5rI"
+          "current_key": "AIzaSyA_sO-YjRWglj0nsqZCDGDVK043HWebyOI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "40420207386-vufcqngd6olsbc2icsh1fglj2h88bh6e.apps.googleusercontent.com",
+              "client_id": "46954291852-9ppnlu2220b5t5oppesqd7fjjkcv7fdk.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

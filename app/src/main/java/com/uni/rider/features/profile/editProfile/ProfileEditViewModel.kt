@@ -7,6 +7,7 @@ import com.uni.data.internal.common.ApiException
 import com.uni.data.internal.common.RiderLoginException
 import com.uni.data.models.User
 import com.uni.rider.common.BaseViewModel
+import com.uni.rider.common.isStatusSuccess
 import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody

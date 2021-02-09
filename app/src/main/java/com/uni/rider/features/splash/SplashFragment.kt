@@ -16,6 +16,7 @@ import com.uni.rider.common.PermissionManager.Companion.PERMISSION_REQUEST_CODE
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_splash.*
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 class SplashFragment : BaseFragment() {
