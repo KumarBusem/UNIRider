@@ -23,7 +23,6 @@ class AddRunsheetFragment : ImageCaptureFragment<AddRunsheetViewModel, FragmentA
     override fun setupViews(): FragmentAddRunsheetBinding.() -> Unit = {
 
         toggleBottomBarVisibility(false)
-        ivBack.setOnClickListener { navigateBack() }
 
         tvCreateProject.setOnClickListener {
             tvCreateProject.disable()

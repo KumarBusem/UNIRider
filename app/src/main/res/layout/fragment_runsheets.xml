@@ -20,40 +20,24 @@
         android:background="#ECF6EF"
         tools:ignore="UnusedAttribute">
 
-        <ImageButton
-            android:id="@+id/ivBack"
-            android:layout_width="0dp"
-            android:layout_height="?actionBarSize"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="#ECF6EF"
-            android:foreground="?selectableItemBackground"
-            android:paddingVertical="14dp"
-            android:paddingStart="6dp"
-            android:scaleType="fitStart"
-            android:src="@drawable/ic_arrow_back_black_24dp"
-            android:tint="#2E363C"
-            app:layout_constraintDimensionRatio="1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/tvRunsheetHeading"
-            style="@style/Text.B2"
+            style="@style/Text.R2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:text="May 2020 Runsheets"
             android:textColor="#2E363C"
-            android:textSize="19dp"
-            app:layout_constraintBottom_toBottomOf="@id/ivBack"
-            app:layout_constraintStart_toEndOf="@id/ivBack"
-            app:layout_constraintTop_toTopOf="@id/ivBack" />
+            android:textSize="15sp"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <ProgressBar
             android:id="@+id/progress_bar_pickup"
-            android:layout_width="30sp"
-            android:layout_height="30sp"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
             android:layout_marginEnd="20sp"
             android:visibility='@{viewModel.obsIsDataLoading.booleanValue() == true ? View.VISIBLE : View.GONE}'
             app:layout_constraintBottom_toBottomOf="@id/tvRunsheetHeading"
@@ -68,7 +52,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivBack">
+            app:layout_constraintTop_toBottomOf="@id/tvRunsheetHeading">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvRunsheetsList"

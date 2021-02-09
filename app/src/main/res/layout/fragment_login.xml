@@ -33,16 +33,6 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:visibility="gone" />
 
-        <ImageView
-            android:id="@+id/iv_sendfast"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/icon_sendfast"
-            app:layout_constraintBottom_toTopOf="@id/clLogin"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clLogin"
@@ -53,7 +43,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_sendfast">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/tvLoginMessage1"
@@ -116,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="22dp"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimaryGreenDark"
                 android:elevation="32dp"
                 android:paddingHorizontal="36dp"
                 android:paddingVertical="9dp"

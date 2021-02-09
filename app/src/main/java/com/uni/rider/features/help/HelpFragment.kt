@@ -15,9 +15,7 @@ class HelpFragment : BaseAbstractFragment<HelpViewModel, FragmentHelpBinding>(R.
 
     override fun setupViews(): FragmentHelpBinding.() -> Unit = {
         toggleBottomBarVisibility(false)
-        backButton.setOnClickListener {
-            navigateBack()
-        }
+
     }
 
     override fun setupObservers(): HelpViewModel.() -> Unit = {

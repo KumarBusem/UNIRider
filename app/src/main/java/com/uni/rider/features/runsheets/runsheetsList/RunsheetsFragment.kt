@@ -34,7 +34,7 @@ class RunsheetsFragment : BaseAbstractFragment<RunsheetsViewModel, FragmentRunsh
             mBinding.srlRunsheets.isRefreshing = false
             mViewModel.getRunsheetsList()
         }
-        ivBack.setOnClickListener { navigateBack() }
+
     }
 
     override fun setupObservers(): RunsheetsViewModel.() -> Unit = {

@@ -24,7 +24,7 @@ class ProfileEditFragment : BaseAbstractFragment<ProfileEditViewModel, FragmentP
     override fun setupViews(): FragmentProfileEditBinding.() -> Unit = {
 
         toggleBottomBarVisibility(false)
-        ivBack.setOnClickListener { navigateBack() }
+
         btnSave.setOnClickListener {
             saveProfile()
         }
