@@ -7,11 +7,11 @@ import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.location.*
 import com.uni.rider.R
 import com.uni.rider.common.*
 import com.uni.rider.databinding.FragmentFeedbackBinding
 import com.uni.rider.features.dialogs.FeedbackDialog
-import com.google.android.gms.location.*
 import kotlinx.android.synthetic.main.fragment_runsheets.*
 import java.util.*
 

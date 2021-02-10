@@ -36,11 +36,11 @@ class AddRunsheetViewModel(context: Application) : BaseViewModel(context) {
         val runsheetDate = obsRunsheetDate.value
         val runsheetImage = obsRunsheetPic.value
 
-        if (runsheetId.isNullOrBlank() || runsheetId.length < 4 ) {
+        if (runsheetId.isNullOrBlank() || runsheetId.length < 4) {
             res("Please enter valid runsheet id")
             obsIsDataLoading.postValue(false)
             return
-        }else if (ofd.isNullOrBlank() || delivered.isNullOrBlank() || runsheetDate.isNullOrBlank() || runsheetImage == null) {
+        } else if (ofd.isNullOrBlank() || delivered.isNullOrBlank() || runsheetDate.isNullOrBlank() || runsheetImage == null) {
             res("Please enter valid information")
             obsIsDataLoading.postValue(false)
             return
@@ -57,7 +57,7 @@ class AddRunsheetViewModel(context: Application) : BaseViewModel(context) {
         builder.addFormDataPart("img", "img", RequestBody.create(MultipartBody.FORM, bos.toByteArray()))
 
         ioScope.launch {
-            try{
+            try {
                 repoImage.addRunsheet(builder.build()) {
                     if (it?.status?.isStatusSuccess()!!) {
                         res("Successfully saved runsheet")

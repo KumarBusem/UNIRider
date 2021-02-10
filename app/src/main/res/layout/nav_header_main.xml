@@ -3,20 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/milky_white"
+    android:background="#ECF6EF"
     android:gravity="bottom"
     android:orientation="vertical"
-    android:padding="34sp"
+    android:padding="40sp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:contentDescription="@string/nav_header_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/uni_big" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

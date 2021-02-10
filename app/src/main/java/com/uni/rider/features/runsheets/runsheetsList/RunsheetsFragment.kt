@@ -25,7 +25,7 @@ class RunsheetsFragment : BaseAbstractFragment<RunsheetsViewModel, FragmentRunsh
     }
 
     override fun setupViews(): FragmentRunsheetsBinding.() -> Unit = {
-        toggleBottomBarVisibility(false)
+        toggleBottomBarVisibility(true)
         rvRunsheetsList.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = mUserAdapter

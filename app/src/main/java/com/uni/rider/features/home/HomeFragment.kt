@@ -1,10 +1,7 @@
 package com.uni.rider.features.home
 
-import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.uni.data.models.MonthYear
 import com.uni.rider.R
 import com.uni.rider.common.*
@@ -49,32 +46,32 @@ class HomeFragment : BaseAbstractFragment<HomeViewModel, FragmentHomeBinding>(R.
         obsRunsheetssList.observe(viewLifecycleOwner, Observer { runsheets ->
             if (runsheets.isNullOrEmpty()) {
                 mBinding.tvNoData.show()
-                mBinding.cvDelivered.invisible()
-                mBinding.cvOfd.invisible()
+                mBinding.cvData.invisible()
                 mBinding.btnRunsheets.invisible()
             } else {
                 var ofd = 0f
                 var delivered = 0f
+                var noOfRunsheets = 0
                 var conversion = 0f
                 runsheets.forEach {
                     ofd += it.ofd
                     delivered += it.delivered
+                    noOfRunsheets++
                 }
                 mBinding.tvOFDValue.text = String.format("%.0f", ofd)
                 mBinding.tvDeliveredValue.text = String.format("%.0f", delivered)
-//                mBinding.pbConversion.progress = (delivered / ofd) * 100f
-//                mBinding.tvConversion.text = String.format("%.1f", ((delivered / ofd) * 100f)) + "%"
+                mBinding.tvRunsheetsValue.text = noOfRunsheets.toString()
+                mBinding.tvConversionValue.text = String.format("%.1f", ((delivered / ofd) * 100f)) + "%"
                 mBinding.btnRunsheets.enable()
 
                 mBinding.tvNoData.invisible()
-                mBinding.cvDelivered.show()
-                mBinding.cvOfd.show()
-//                mBinding.cvConversion.show()
+                mBinding.cvData.show()
                 mBinding.btnRunsheets.show()
             }
         })
         obsMonthYear.observe(viewLifecycleOwner, Observer { monthYear ->
-            tvDate.text = "${DateFormatSymbols().months[monthYear.month - 1]} ${monthYear.year}"
+            mBinding.tvDate.text = "${DateFormatSymbols().months[monthYear.month - 1]} ${monthYear.year}"
+            mBinding.tvRunsheetsForSelectedMonth.text = "${DateFormatSymbols().months[monthYear.month - 1]} ${monthYear.year} Runsheets"
         })
 
 

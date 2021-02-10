@@ -15,170 +15,136 @@
     </data>
 
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_runsheet"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:elevation="1dp"
+        android:orientation="horizontal"
+        android:paddingVertical="20sp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layout_runsheet"
+
+        <TextView
+            android:id="@+id/tv_EarningTitle"
+            style="@style/Text.R3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="horizontal">
+            android:layout_marginHorizontal="17sp"
+            android:text='@{DateUtils.INSTANCE.getMonthYearForSalary(data)}'
+            android:textColor="#232323"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="May 2020" />
 
-            <ImageView
-                android:id="@+id/ivTopZigjag"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:background="#ECF6EF"
-                android:paddingTop="4dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/bg_zigjog"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tv_cEarningTag"
+            style="@style/Text.R4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:text="Your total net payment of the month"
+            android:textColor="#737573"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_EarningTitle" />
 
-            <TextView
-                android:id="@+id/tv_EarningTitle"
-                style="@style/Text.R3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="17sp"
-                android:layout_marginTop="16sp"
-                android:text='@{DateUtils.INSTANCE.getMonthYearForSalary(data)}'
-                android:textColor="#232323"
-                android:textSize="18sp"
-                app:layout_constraintTop_toBottomOf="@id/ivTopZigjag"
-                tools:text="May 2020" />
+        <TextView
+            android:id="@+id/tv_netPaymentMonth"
+            style="@style/Text.R2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="17dp"
+            android:text='@{"₹" + String.valueOf(data.salary)}'
+            android:textColor="@color/colorPrimary"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_cEarningTag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_EarningTitle"
+            tools:text="₹9300" />
 
-            <TextView
-                android:id="@+id/tv_cEarningTag"
-                style="@style/Text.R4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="18dp"
-                android:text="Your total net payment of the month"
-                android:textColor="#737573"
-                android:textSize="12sp"
-                app:layout_constraintTop_toBottomOf="@id/tv_EarningTitle" />
-
-            <TextView
-                android:id="@+id/tv_netPaymentMonth"
-                style="@style/Text.R2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="17dp"
-                android:text='@{"₹" + String.valueOf(data.salary)}'
-                android:textColor="@color/colorPrimary"
-                android:textSize="26sp"
-                app:layout_constraintBottom_toBottomOf="@id/tv_cEarningTag"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/tv_EarningTitle"
-                tools:text="₹9300" />
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="12sp"
+            android:orientation="horizontal"
+            android:weightSum="7"
+            app:layout_constraintTop_toBottomOf="@id/tv_cEarningTag">
 
             <LinearLayout
-                android:id="@+id/ll1"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="12sp"
-                android:orientation="horizontal"
-                android:weightSum="7"
-                app:layout_constraintTop_toBottomOf="@id/tv_cEarningTag">
+                android:layout_weight="4">
+
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4">
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="47dp"
-                        android:layout_height="47dp"
-                        android:padding="3dp"
-                        android:src="@drawable/icon_delivered" />
-
-                    <LinearLayout
+                    <TextView
+                        style="@style/Text.R4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="10dp"
-                        android:orientation="vertical">
+                        android:text="Shipments Delivered"
+                        android:textColor="#767A79"
+                        android:textSize="13sp" />
 
-                        <TextView
-                            style="@style/Text.R4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Shipments Delivered"
-                            android:textColor="#767A79"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tv_totalEarningsCycle1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="sans-serif"
-                            android:text="@{String.valueOf(data.delivered)}"
-                            android:textColor="#636363"
-                            android:textSize="16dp"
-                            tools:text="1130" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3">
-
-                    <ImageView
-                        android:layout_width="47dp"
-                        android:layout_height="47dp"
-                        android:padding="3dp"
-                        android:src="@drawable/icon_deductions" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="10dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/Text.R4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="TDS Tax"
-                            android:textColor="#FF767A79"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tv_totalDeductionsCycle1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="sans-serif"
-                            android:text='@{"₹" + String.valueOf(data.tds)}'
-                            android:textColor="#636363"
-                            android:textSize="16dp"
-                            tools:text="₹300" />
-                    </LinearLayout>
-
+                    <TextView
+                        android:id="@+id/tv_totalEarningsCycle1"
+                        style="@style/Text.R3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@{String.valueOf(data.delivered)}"
+                        android:textColor="#636363"
+                        android:textSize="17sp"
+                        tools:text="1130" />
                 </LinearLayout>
 
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/ivBottomZigjag"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12sp"
-                android:adjustViewBounds="true"
-                android:background="#ECF6EF"
-                android:paddingTop="3dp"
-                android:rotation="180"
-                android:scaleType="fitXY"
-                android:src="@drawable/bg_zigjog"
-                app:layout_constraintTop_toBottomOf="@id/ll1" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </RelativeLayout>
+                android:layout_weight="3">
 
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Text.R4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TDS Tax"
+                        android:textColor="#FF767A79"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_totalDeductionsCycle1"
+                        style="@style/Text.R3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text='@{"₹" + String.valueOf(data.tds)}'
+                        android:textColor="#636363"
+                        android:textSize="17sp"
+                        tools:text="₹300" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

@@ -11,9 +11,9 @@ import androidx.databinding.BindingAdapter
 import androidx.databinding.InverseBindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.uni.rider.R
 import com.github.chrisbanes.photoview.PhotoView
 import com.google.android.material.textfield.TextInputEditText
+import com.uni.rider.R
 
 /** View extensions */
 

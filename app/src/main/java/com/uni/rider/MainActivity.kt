@@ -9,21 +9,20 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
-import android.view.View
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.Navigation
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.*
 import com.google.android.material.navigation.NavigationView
-import com.uni.rider.common.*
 import com.uni.data.dataSources.definitions.DataSourceFirestore
+import com.uni.data.dataSources.definitions.DataSourceSharedPreferences
 import com.uni.data.dataSources.repos.RepoFirestore
-import com.uni.rider.common.hide
-import com.uni.rider.common.isGpsAvailable
-import com.uni.rider.common.isNetworkAvailable
-import com.uni.rider.common.show
+import com.uni.data.dataSources.repos.RepoSharedPreferences
+import com.uni.rider.common.*
+import com.uni.rider.features.dialogs.TwoButtonAlertDialogFragment
 import io.github.inflationx.calligraphy3.CalligraphyConfig
 import io.github.inflationx.calligraphy3.CalligraphyInterceptor
 import io.github.inflationx.viewpump.ViewPump
@@ -37,6 +36,10 @@ class MainActivity : AppCompatActivity() {
 
     private val repoFirestore: DataSourceFirestore by lazy { RepoFirestore() }
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var navView: NavigationView
+    private val repoPrefs: DataSourceSharedPreferences by lazy { RepoSharedPreferences() }
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,23 +65,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpNavigation() {
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        val navView: NavigationView = findViewById(R.id.nav_view)
+        drawerLayout = findViewById(R.id.drawer_layout)
+        navView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
 
         appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.homeFragment, R.id.salaryFragment, R.id.feedbackFragment, R.id.profileFragment
-                , R.id.termsFragment, R.id.helpFragment), drawerLayout)
+                R.id.homeFragment, R.id.salaryFragment, R.id.feedbackFragment, R.id.profileFragment, R.id.termsFragment, R.id.helpFragment), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-//        menuInflater.inflate(R.menu.main2, menu)
+        menuInflater.inflate(R.menu.actionmenu, menu)
         return true
     }
+
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
+        navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
@@ -102,7 +105,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setBottomBarVisibility(shouldDisplay: Boolean) {
-
+        if (shouldDisplay) supportActionBar?.show() else supportActionBar?.hide()
     }
 
     private val networkReceiver = object : BroadcastReceiver() {
@@ -160,4 +163,38 @@ class MainActivity : AppCompatActivity() {
             startActivity(browserIntent)
         }
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.actionLogout -> {
+                showConfirmationDialogueFor("Are you sure you want Logout") { logoutUser() }
+                true
+            }
+            R.id.actionPolicy -> {
+                redirectPolicyPage()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun redirectPolicyPage() {
+        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://sendfast.in/privacy-policy/")))
+    }
+
+
+    private fun logoutUser() {
+        repoPrefs.clearLoggedInUser()
+        navController.navigate(R.id.loginFragment)
+    }
+
+    fun showConfirmationDialogueFor(message: String, onConfirmation: () -> Unit) {
+        TwoButtonAlertDialogFragment.Builder()
+                .setMessage(message)
+                .onPrimaryAction(onConfirmation)
+                .dismissOnClick()
+                .build()
+                .show(supportFragmentManager, TwoButtonAlertDialogFragment::class.java.simpleName)
+    }
+
 }

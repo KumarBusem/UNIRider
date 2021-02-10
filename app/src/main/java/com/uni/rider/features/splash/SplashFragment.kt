@@ -8,12 +8,12 @@ import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.material.snackbar.Snackbar
 import com.uni.rider.BuildConfig
 import com.uni.rider.R
 import com.uni.rider.common.BaseFragment
 import com.uni.rider.common.PermissionManager
 import com.uni.rider.common.PermissionManager.Companion.PERMISSION_REQUEST_CODE
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_splash.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

@@ -37,7 +37,7 @@ abstract class ImageCaptureFragment<T : BaseViewModel, U : ViewDataBinding>(frag
                     onImageCaptureFailure("Image creating failed", e)
                 }
                 if (photoFile != null) {
-                    val photoURI: Uri = FileProvider.getUriForFile(requireContext(), "com.dcartlogistics.rider.fileprovider",
+                    val photoURI: Uri = FileProvider.getUriForFile(requireContext(), "com.uni.rider.fileprovider",
                             photoFile)
                     takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
                     startActivityForResult(takePictureIntent, requestCode)

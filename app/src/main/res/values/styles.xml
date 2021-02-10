@@ -8,9 +8,9 @@
         <item name="colorPrimaryVariant">@color/colorPrimary</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/colorGrey600</item>
-        <item name="colorSecondaryVariant">@color/colorGrey600</item>
-        <item name="colorOnSecondary">@color/colorGrey600</item>
+        <item name="colorSecondary">@color/colorPrimaryGreenDark</item>
+        <item name="colorSecondaryVariant">@color/colorPrimaryGreenDark</item>
+        <item name="colorOnSecondary">@color/colorPrimaryGreenDark</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="fontPath">fonts/WorkSans-Regular.ttf</item>
@@ -53,11 +53,6 @@
 
 
     <!--REGULAR FONTS-->
-    <style name="Text.ActionBar.Title" parent="Text.B2">
-        <item name="android:gravity">center_vertical|center_horizontal</item>
-        <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:textSize">23dp</item>
-    </style>
 
     <style name="Text.R1" parent="AppTheme">
         <item name="fontPath">fonts/WorkSans-Regular.ttf</item>

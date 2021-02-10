@@ -31,9 +31,5 @@
         android:icon="@drawable/ic_baseline_help_outline_24"
         android:title="Support" />
 
-    <item
-        android:id="@+id/btnLogout"
-        android:icon="@drawable/icon_logout"
-        android:title="Logout" />
 
 </menu>

@@ -18,7 +18,6 @@
         android:id="@+id/clProjectDetails"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingHorizontal="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -27,13 +26,14 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnSave"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp">
 
                 <TextView
                     android:id="@+id/tvAadharTitle"
@@ -112,7 +112,7 @@
                 <EditText
                     android:id="@+id/etAccount"
                     style="@style/Text.R3"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/edit_text_round_gray_empty_background"
@@ -121,7 +121,7 @@
                     android:inputType="number"
                     android:padding="14dp"
                     android:text="@={viewModel.obsAccount}"
-                    app:layout_constraintEnd_toStartOf="@id/etIFSC"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvAccountTitle" />
 
@@ -134,15 +134,14 @@
                     android:layout_marginTop="14dp"
                     android:text="IFSC Code"
                     android:textColor="@color/colorGrey500"
-                    app:layout_constraintStart_toStartOf="@id/etIFSC"
-                    app:layout_constraintTop_toBottomOf="@+id/etPan" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etAccount" />
 
                 <EditText
                     android:id="@+id/etIFSC"
                     style="@style/Text.R3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/edit_text_round_gray_empty_background"
                     android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
@@ -152,7 +151,7 @@
                     android:padding="14dp"
                     android:text="@={viewModel.obsIFSC}"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/etAccount"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvIfscTitle" />
 
                 <TextView
@@ -165,7 +164,7 @@
                     android:text="Email"
                     android:textColor="@color/colorGrey500"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/etAccount" />
+                    app:layout_constraintTop_toBottomOf="@+id/etIFSC" />
 
                 <EditText
                     android:id="@+id/etEmail"
@@ -215,23 +214,6 @@
                     app:layout_constraintTop_toBottomOf="@id/tvPhoneTitle"
                     tools:ignore="Autofill" />
 
-                <TextView
-                    android:id="@+id/btnSave"
-                    style="@style/Text.B3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16sp"
-                    android:layout_marginBottom="14sp"
-                    android:background="@drawable/edit_text_round_gray_empty_background"
-                    android:backgroundTint="@color/colorPrimaryGreenDark"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?selectableItemBackground"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:padding="13sp"
-                    android:text="Save"
-                    android:textColor="@color/colorWhite"
-                    app:layout_constraintTop_toBottomOf="@id/etPhone" />
 
                 <ProgressBar
                     android:id="@+id/pbIsDataLoading"
@@ -247,6 +229,21 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 
+        <TextView
+            android:id="@+id/btnSave"
+            style="@style/Text.B3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_round_gray_empty_background"
+            android:backgroundTint="@color/colorPrimaryGreenDark"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="13sp"
+            android:text="Save"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

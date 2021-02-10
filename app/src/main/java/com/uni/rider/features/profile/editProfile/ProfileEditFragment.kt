@@ -23,7 +23,7 @@ class ProfileEditFragment : BaseAbstractFragment<ProfileEditViewModel, FragmentP
 
     override fun setupViews(): FragmentProfileEditBinding.() -> Unit = {
 
-        toggleBottomBarVisibility(false)
+        toggleBottomBarVisibility(true)
 
         btnSave.setOnClickListener {
             saveProfile()

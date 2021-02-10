@@ -1,6 +1,5 @@
 package com.uni.rider.features.profile.profileDetails
 
-import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.util.Log
@@ -16,7 +15,6 @@ import com.uni.rider.common.ViewModelFactory
 import com.uni.rider.databinding.FragmentProfileBinding
 import com.uni.rider.features.dialogs.ChangePasswordDialog
 import com.uni.rider.features.dialogs.FilePickerDialogFragment
-import com.uni.rider.features.dialogs.TwoButtonAlertDialogFragment
 
 class ProfileFragment : ImageCaptureFragment<ProfileViewModel, FragmentProfileBinding>(R.layout.fragment_profile) {
     private val changePasswordDialog: ChangePasswordDialog by lazy {
@@ -35,36 +33,11 @@ class ProfileFragment : ImageCaptureFragment<ProfileViewModel, FragmentProfileBi
         toggleBottomBarVisibility(true)
         setAppVersion()
 
-        btnHelp.setOnClickListener {
-            navigateById(R.id.action_profileFragment_to_helpFragment)
-        }
 
-        btnTerms.setOnClickListener {
-            navigateById(R.id.action_profileFragment_to_termsFragment)
-        }
         btnEditProfile.setOnClickListener {
             navigateById(R.id.action_profileFragment_to_profileEditFragment)
         }
 
-        btnLogout.setOnClickListener {
-            showConfirmationDialogueFor("Are you sure you want Logout") {
-                mViewModel.onLogoutButtonClick()
-            }
-        }
-        mBinding.btnPlaystore.setOnClickListener {
-            val browserIntent = Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse("https://play.google.com/store/apps/details?id=com.dcartlogistics.rider")
-            )
-            startActivity(browserIntent)
-        }
-        mBinding.btnPrivacy.setOnClickListener {
-            val browserIntent = Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse("https://sendfast.in/privacy-policy/")
-            )
-            startActivity(browserIntent)
-        }
 
         mBinding.btnPasswordChange.setOnClickListener {
             changePasswordDialog.show(childFragmentManager, ProfileFragment::class.java.simpleName)
@@ -110,14 +83,6 @@ class ProfileFragment : ImageCaptureFragment<ProfileViewModel, FragmentProfileBi
         ).show(childFragmentManager, FilePickerDialogFragment::class.java.simpleName)
     }
 
-    fun showConfirmationDialogueFor(message: String, onConfirmation: () -> Unit) {
-        TwoButtonAlertDialogFragment.Builder()
-                .setMessage(message)
-                .onPrimaryAction(onConfirmation)
-                .dismissOnClick()
-                .build()
-                .show(this@ProfileFragment.childFragmentManager, TwoButtonAlertDialogFragment::class.java.simpleName)
-    }
 
     override fun onImageCaptured(bitmap: Bitmap) {
         mViewModel.uploadProfilePicture(bitmap.getResizedByteArrayImage(300))

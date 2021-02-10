@@ -14,7 +14,7 @@ class HelpFragment : BaseAbstractFragment<HelpViewModel, FragmentHelpBinding>(R.
             }).get(HelpViewModel::class.java)
 
     override fun setupViews(): FragmentHelpBinding.() -> Unit = {
-        toggleBottomBarVisibility(false)
+        toggleBottomBarVisibility(true)
 
     }
 

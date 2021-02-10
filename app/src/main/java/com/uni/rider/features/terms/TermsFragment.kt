@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.fragment_terms.*
 class TermsFragment : BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        toggleBottomBarVisibility(false)
+        toggleBottomBarVisibility(true)
         return inflater.inflate(R.layout.fragment_terms, container, false)
     }
 
