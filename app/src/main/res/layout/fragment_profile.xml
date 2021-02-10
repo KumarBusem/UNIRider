@@ -19,13 +19,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:animateLayoutChanges="true"
-        android:background="#ECF6EF"
+        android:background="#EFF6F1"
         tools:ignore="ContentDescription,UnusedAttribute">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/mcvProfilePic"
-            android:layout_width="80sp"
-            android:layout_height="80sp"
+            android:layout_width="85sp"
+            android:layout_height="85sp"
             android:layout_marginTop="16dp"
             android:foreground="?selectableItemBackground"
             app:cardCornerRadius="10sp"
@@ -66,7 +66,7 @@
 
         <TextView
             android:id="@+id/tvPhoneNumber"
-            style="@style/Text.R4"
+            style="@style/Text.R13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -357,7 +357,7 @@
             android:layout_height="wrap_content"
             android:paddingBottom="20dp"
             android:textAlignment="center"
-            android:textColor="@color/colorGrey500"
+            android:textColor="@color/colorGrey700"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
