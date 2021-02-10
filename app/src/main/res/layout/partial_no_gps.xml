@@ -11,15 +11,14 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lavNoInternet"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:layout_marginBottom="110dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="@id/gl"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/gl"
         app:lottie_autoPlay="true"
-        app:lottie_fileName="anim_gps_new.json"
+        app:lottie_fileName="anim_error.json"
         app:lottie_loop="true"
         app:lottie_speed="0.5" />
 
@@ -42,7 +41,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Please check your GPS"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#303030"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +63,8 @@
     <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/gl"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.42" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

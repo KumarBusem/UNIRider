@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8sp"
                     android:background="@drawable/edit_text_round_gray_empty_background"
-                    android:hint="Delivered"
+                    android:hint="Completed"
                     android:inputType="number"
                     android:maxLength="10"
                     android:padding="14sp"

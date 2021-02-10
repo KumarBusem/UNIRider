@@ -106,11 +106,6 @@
         android:name="com.uni.rider.features.feedback.FeedbackFragment"
         android:label="Customer Feedbacks"
         tools:layout="@layout/fragment_feedback" />
-    <fragment
-        android:id="@+id/servicesFragment"
-        android:name="com.uni.rider.features.services.ServicesFragment"
-        android:label="Services"
-        tools:layout="@layout/fragment_services" />
 
     <fragment
         android:id="@+id/termsFragment"

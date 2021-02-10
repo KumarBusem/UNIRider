@@ -11,17 +11,16 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lavNoInternet"
-        android:layout_width="220sp"
-        android:layout_height="220sp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="@id/guideLine"
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        app:layout_constraintBottom_toTopOf="@id/tvMaintenanceMessage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideLine"
+        app:layout_constraintTop_toBottomOf="@id/tvHeading"
         app:lottie_autoPlay="true"
-        app:lottie_fileName="no_longer_supported_anim.json"
+        app:lottie_fileName="anim_error.json"
         app:lottie_loop="true"
-        app:lottie_speed="1.5" />
+        app:lottie_speed="1" />
 
     <TextView
         android:id="@+id/tvHeading"
@@ -42,14 +41,13 @@
         style="@style/Text.B3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="@string/depreciation_message_1"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#303030"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lavNoInternet" />
+        app:layout_constraintTop_toTopOf="@id/guideLine"/>
 
     <TextView
         android:id="@+id/tvMaintenanceMessage2"
@@ -105,6 +103,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.37" />
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

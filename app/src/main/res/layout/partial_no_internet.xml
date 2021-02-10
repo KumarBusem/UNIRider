@@ -12,14 +12,14 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lavNoInternet"
-        android:layout_width="230sp"
-        android:layout_height="230sp"
+        android:layout_width="120sp"
+        android:layout_height="120sp"
         app:layout_constraintBottom_toBottomOf="@id/guideLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideLine"
         app:lottie_autoPlay="true"
-        app:lottie_fileName="anim_no_internet2.json"
+        app:lottie_fileName="anim_error.json"
         app:lottie_loop="true"
         app:lottie_speed="0.5" />
 
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/no_internet_message_1"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#303030"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

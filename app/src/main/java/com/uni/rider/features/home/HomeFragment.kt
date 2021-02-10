@@ -71,9 +71,8 @@ class HomeFragment : BaseAbstractFragment<HomeViewModel, FragmentHomeBinding>(R.
         })
         obsMonthYear.observe(viewLifecycleOwner, Observer { monthYear ->
             mBinding.tvDate.text = "${DateFormatSymbols().months[monthYear.month - 1]} ${monthYear.year}"
-            mBinding.tvRunsheetsForSelectedMonth.text = "${DateFormatSymbols().months[monthYear.month - 1]} ${monthYear.year} Runsheets"
+            mBinding.tvRunsheetsForSelectedMonth.text = "${DateFormatSymbols().months[monthYear.month - 1]} ${monthYear.year} Runsheets list"
         })
-
 
     }
 
@@ -89,6 +88,5 @@ class HomeFragment : BaseAbstractFragment<HomeViewModel, FragmentHomeBinding>(R.
         mViewModel.getRunsheetsList()
         super.onResume()
     }
-
 
 }

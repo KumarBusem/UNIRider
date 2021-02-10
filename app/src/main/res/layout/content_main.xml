@@ -23,4 +23,23 @@
         android:layout_height="10dp"
         android:background="@color/colorPrimaryGreenDark"
         app:layout_constraintBottom_toBottomOf="parent" />
+    <include
+        android:id="@+id/plNoInternet"
+        layout="@layout/partial_no_internet"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/plNoGPS"
+        layout="@layout/partial_no_gps"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/plUnderMaintenance"
+        layout="@layout/partial_under_maintenance"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/plBlockedVersion"
+        layout="@layout/partial_blocked_version"
+        android:visibility="gone" />
 </androidx.constraintlayout.widget.ConstraintLayout>
