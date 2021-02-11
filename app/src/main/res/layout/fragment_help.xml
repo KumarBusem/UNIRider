@@ -17,7 +17,6 @@
         android:layout_height="match_parent"
         android:background="#fff">
 
-
         <TextView
             android:id="@+id/tvTag"
             style="@style/Text.R3"
@@ -26,7 +25,7 @@
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="20dp"
             android:text="Contact here for technical problems"
-            android:textColor="#888C8B"
+            android:textColor="#595C5B"
             android:textSize="13sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -35,11 +34,12 @@
         <TextView
             android:id="@+id/tv_payslipDesription"
             style="@style/Text.R3"
+            android:textSize="20sp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
-            android:text="developer@sendfast.in"
-            android:textColor="#6F7170"
+            android:text="developer@uni.in"
+            android:textColor="#505151"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvTag" />
 

@@ -36,7 +36,6 @@ abstract class BaseAbstractFragment<VT : BaseViewModel, BT : ViewDataBinding>
                     navigateById(R.id.loginFragment)
                 }
             })
-
         }
         return mBinding.root
     }
@@ -45,7 +44,6 @@ abstract class BaseAbstractFragment<VT : BaseViewModel, BT : ViewDataBinding>
         super.onViewCreated(view, savedInstanceState)
         mBinding.apply { setupViews().invoke(mBinding) }
     }
-
 
     abstract fun setViewModel(): VT
     abstract fun setupViews(): BT.() -> Unit

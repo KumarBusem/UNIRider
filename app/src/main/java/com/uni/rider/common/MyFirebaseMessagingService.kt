@@ -42,7 +42,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                 .setContentTitle(remoteMessage?.title)
                 .setAutoCancel(true)
                 .setOngoing(true)
-                .setColor(resources.getColor(R.color.colorRed))
                 .setContentText(remoteMessage?.body)
                 .setSubText("Click here to open")
                 .setContentIntent(getPendingIntent(remoteMessage?.title))

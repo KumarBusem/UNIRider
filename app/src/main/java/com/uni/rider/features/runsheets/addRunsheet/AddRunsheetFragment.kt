@@ -40,6 +40,9 @@ class AddRunsheetFragment : ImageCaptureFragment<AddRunsheetViewModel, FragmentA
         obsIsRunsheetSaved.observe(viewLifecycleOwner, Observer {
             if (it) navigateBack()
         })
+        obsIsDataLoading.observe(viewLifecycleOwner, Observer {
+            if (!it) mBinding.tvCreateProject.enable()
+        })
     }
 
     private fun showFileTypeDialogue() {
