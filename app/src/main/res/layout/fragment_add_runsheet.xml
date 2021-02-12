@@ -15,26 +15,23 @@
 
     </data>
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clProjectDetails"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingHorizontal="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvCreateProject"
             app:layout_constraintTop_toTopOf="parent">
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingHorizontal="16sp"
                 android:orientation="vertical">
 
                 <EditText
@@ -228,22 +225,7 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/tvCreateProject"
-                    style="@style/Text.B3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10sp"
-                    android:background="@drawable/edit_text_round_gray_empty_background"
-                    android:backgroundTint="@color/colorPrimaryGreenDark"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?selectableItemBackground"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:padding="12sp"
-                    android:text="Save runsheet"
-                    android:textColor="@color/colorWhite"
-                    app:layout_constraintTop_toBottomOf="@id/cvTakePicture" />
+
 
                 <ProgressBar
                     android:id="@+id/pbIsDataLoading"
@@ -259,7 +241,22 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 
+        <TextView
+            android:id="@+id/tvCreateProject"
+            style="@style/Text.B3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/edit_text_round_gray_empty_background"
+            android:backgroundTint="@color/colorPrimaryGreenDark"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="12sp"
+            android:text="Save runsheet"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
+    
 </layout>

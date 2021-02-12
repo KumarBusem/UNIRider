@@ -32,13 +32,18 @@ class ProfileEditViewModel(context: Application) : BaseViewModel(context) {
 
     init {
         var user = repoPrefs.getLoggedInUser()
-        obsUser.postValue(user)
-        obsAadhar.postValue(user?.aadhar_number)
-        obsPan.postValue(user?.pan_card)
-        obsEmail.postValue(user?.email)
-        obsAccount.postValue(user?.bank_account_no)
-        obsIFSC.postValue(user?.ifsc_no)
-        obsAlternate.postValue(user?.alternate_no)
+        if(user == null){
+            repoPrefs.clearLoggedInUser()
+            isUserLogout.postValue(true)
+        }else{
+            obsUser.postValue(user!!)
+            obsAadhar.postValue(user.aadhar_number!!)
+            obsPan.postValue(user.pan_card!!)
+            obsEmail.postValue(user.email!!)
+            obsAccount.postValue(user.bank_account_no!!)
+            obsIFSC.postValue(user.ifsc_no!!)
+            obsAlternate.postValue(user.alternate_no!!)
+        }
     }
 
     fun saveProfile(res: (String) -> Unit) {

@@ -92,7 +92,6 @@ class MainActivity : AppCompatActivity() {
             if (settings.latestVersion != BuildConfig.VERSION_NAME) {
                 plBlockedVersion.show()
                 plBlockedVersion.tvHeading.text = "Unsupported App Version\n${BuildConfig.VERSION_NAME}"
-
             } else {
                 plBlockedVersion.hide()
             }
@@ -151,14 +150,14 @@ class MainActivity : AppCompatActivity() {
         plBlockedVersion.btnUpdatePlaystore.setOnClickListener {
             val browserIntent = Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse("https://play.google.com/store/apps/details?id=com.dcartlogistics.rider")
+                    Uri.parse("https://play.google.com/store/apps/details?id=com.uni.rider")
             )
             startActivity(browserIntent)
         }
         plBlockedVersion.btnUpdate.setOnClickListener {
             val browserIntent = Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse("https://drive.google.com/file/d/1NZ0sfyqtGq7gZxb2N0E1Z16I3EmQY-3Q/view?usp=sharing")
+                    Uri.parse("https://drive.google.com/file/d/1ZoRqm1apmfe6T-OW6FPQVDKcU74eob0y/view?usp=sharing")
             )
             startActivity(browserIntent)
         }

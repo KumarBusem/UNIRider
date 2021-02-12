@@ -31,20 +31,20 @@ class FeedbackViewModel(context: Application) : BaseViewModel(context) {
                 }
             } catch (e: ApiException) {
                 obsMessage.postValue(e.message!!)
-                obsFeedbackList.postValue(null)
+                obsFeedbackList.postValue(emptyList())
                 obsIsDataLoading.postValue(false)
             } catch (e: SocketTimeoutException) {
                 obsMessage.postValue("Slow Network!\nPlease ty again")
-                obsFeedbackList.postValue(null)
+                obsFeedbackList.postValue(emptyList())
                 obsIsDataLoading.postValue(false)
             } catch (e: RiderLoginException) {
                 repoPrefs.clearLoggedInUser()
-                obsFeedbackList.postValue(null)
+                obsFeedbackList.postValue(emptyList())
                 isUserLogout.postValue(true)
                 obsIsDataLoading.postValue(false)
             } catch (e: Exception) {
                 obsMessage.postValue(e.message + "")
-                obsFeedbackList.postValue(null)
+                obsFeedbackList.postValue(emptyList())
                 obsIsDataLoading.postValue(false)
             }
         }
