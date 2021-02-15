@@ -166,11 +166,11 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.actionLogout -> {
-                showConfirmationDialogueFor("Are you sure you want Logout") { logoutUser() }
+                showConfirmationDialogueFor("Alert", "Are you sure you want Logout") { logoutUser() }
                 true
             }
             R.id.actionPolicy -> {
-                redirectPolicyPage()
+                showConfirmationDialogueFor("Privacy Policy", "Redirect to Web browser") { redirectPolicyPage() }
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -181,19 +181,18 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://sendfast.in/privacy-policy/")))
     }
 
-
     private fun logoutUser() {
         repoPrefs.clearLoggedInUser()
         navController.navigate(R.id.loginFragment)
     }
 
-    fun showConfirmationDialogueFor(message: String, onConfirmation: () -> Unit) {
+    private fun showConfirmationDialogueFor(title: String, message: String, onConfirmation: () -> Unit) {
         TwoButtonAlertDialogFragment.Builder()
                 .setMessage(message)
                 .onPrimaryAction(onConfirmation)
+                .setTitle(title)
                 .dismissOnClick()
                 .build()
                 .show(supportFragmentManager, TwoButtonAlertDialogFragment::class.java.simpleName)
     }
-
 }
