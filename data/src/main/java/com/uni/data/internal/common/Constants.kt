@@ -13,5 +13,5 @@ const val BUILD_TYPE_DEBUG : String = "debug"
 //val baseUrl = if(BuildConfig.BUILD_TYPE == BUILD_TYPE_RELEASE) "http://admin.sendfast.in"
 //else "http://165.22.214.54:8080"
 
-val baseUrl = if(BuildConfig.BUILD_TYPE == BUILD_TYPE_RELEASE) "http://65.1.20.255"
-else "http://65.1.20.255"
+val baseUrl = if(BuildConfig.BUILD_TYPE == BUILD_TYPE_RELEASE) "http://admin.unindia.in"
+else "http://admin.unindia.in"
