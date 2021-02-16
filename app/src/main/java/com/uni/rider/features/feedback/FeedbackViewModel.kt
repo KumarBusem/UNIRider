@@ -84,6 +84,5 @@ class FeedbackViewModel(context: Application) : BaseViewModel(context) {
                 obsIsDataLoading.postValue(false)
             }
         }
-
     }
 }

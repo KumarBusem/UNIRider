@@ -137,6 +137,5 @@ fun TextView.setSProjectStatusColor(status: String?) {
 //        Project.STATUS_COMPLETED -> R.color.colorGreen
         else -> R.color.colorGrey500
     }
-
     setTextColor(ContextCompat.getColor(context, color))
 }

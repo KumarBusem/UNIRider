@@ -54,7 +54,6 @@ class FeedbackFragment : BaseAbstractFragment<FeedbackViewModel, FragmentFeedbac
                     mPermissionManager.requestAllPermissions()
                 }
         }
-
     }
 
     override fun setupObservers(): FeedbackViewModel.() -> Unit = {
@@ -76,7 +75,6 @@ class FeedbackFragment : BaseAbstractFragment<FeedbackViewModel, FragmentFeedbac
                 }
             }
         })
-
     }
 
     @SuppressLint("MissingPermission")
@@ -117,5 +115,4 @@ class FeedbackFragment : BaseAbstractFragment<FeedbackViewModel, FragmentFeedbac
         LocationServices.getFusedLocationProviderClient(requireContext())
                 .requestLocationUpdates(mLocationRequest, mLocationCallback, null)
     }
-
 }

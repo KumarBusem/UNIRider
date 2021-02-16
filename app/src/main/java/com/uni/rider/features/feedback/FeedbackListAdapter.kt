@@ -19,8 +19,6 @@ class FeedbackListAdapter : ListAdapter<Feedback, FeedbackListAdapter.FeedbackVi
     }
 
     inner class FeedbackViewHolder(private val item: ItemFeedbackBinding) : RecyclerView.ViewHolder(item.root) {
-
-
         fun bind(data: Feedback) {
             item.data = data
         }

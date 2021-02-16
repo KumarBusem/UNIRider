@@ -14,7 +14,6 @@
 
     </data>
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -202,7 +201,6 @@
                 app:layout_constraintTop_toBottomOf="@id/tvAlternate"
                 tools:text="3421111322" />
 
-
             <TextView
                 android:id="@+id/tvAccount"
                 style="@style/Text.R4"
@@ -267,7 +265,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cvDetails">
 
-
             <ImageView
                 android:id="@+id/ivProfile"
                 android:layout_width="21sp"
@@ -278,7 +275,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:tint="@color/white" />
-
 
             <TextView
                 style="@style/Text.B3"
@@ -334,9 +330,7 @@
                 app:layout_constraintStart_toEndOf="@id/ivLock"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         <ImageView
             android:id="@+id/tvCPE"
@@ -364,6 +358,5 @@
             tools:text="v1.00105001" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </layout>

@@ -11,7 +11,6 @@ class PermissionManager(private val host: Fragment) {
 
     fun requestAllPermissions() {
         takePermissions()
-
     }
 
     private fun checkPermissions(): Boolean {
@@ -32,7 +31,6 @@ class PermissionManager(private val host: Fragment) {
     }
 
     companion object {
-
         const val PERMISSION_REQUEST_CODE: Int = 100
         const val REQUEST_PERMISSIONS_REQUEST_CODE = 34
     }

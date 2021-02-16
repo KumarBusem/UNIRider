@@ -60,10 +60,7 @@ class ProfileEditFragment : BaseAbstractFragment<ProfileEditViewModel, FragmentP
         obsIsOtpSent.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
             if (it == true) {
                 if (!otpDialog.isVisible)
-                    otpDialog.show(
-                            childFragmentManager,
-                            ProfileEditFragment::class.java.simpleName
-                    )
+                    otpDialog.show(childFragmentManager, ProfileEditFragment::class.java.simpleName)
             }
         })
         obsIsOtpVerified.observe(viewLifecycleOwner, androidx.lifecycle.Observer {

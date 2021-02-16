@@ -93,9 +93,7 @@ class SplashFragment : BaseFragment() {
         super.onResume()
     }
 
-
     companion object {
         private const val SPLASH_DURATION: Long = 2000
     }
-
 }
