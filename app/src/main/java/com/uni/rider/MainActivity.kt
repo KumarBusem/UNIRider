@@ -95,7 +95,6 @@ class MainActivity : AppCompatActivity() {
             } else {
                 plBlockedVersion.hide()
             }
-            
             if (settings.underMaintenance == true) {
                 plUnderMaintenance.show()
             } else {
