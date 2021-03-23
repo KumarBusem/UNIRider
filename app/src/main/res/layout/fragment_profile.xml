@@ -72,7 +72,7 @@
             android:clickable="false"
             android:focusable="false"
             android:text='@{viewModel.obsUser.phone_number ?? @string/n_a}'
-            android:textColor="@color/colorGrey500"
+            android:textColor="@color/colorGrey700"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvName"
@@ -87,7 +87,7 @@
             android:layout_marginStart="4dp"
             android:gravity="center"
             android:text='@{viewModel.obsUser.sf_id ?? @string/n_a}'
-            android:textColor="@color/colorGrey700"
+            android:textColor="@color/colorGrey900"
             android:textSize="13dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +98,7 @@
             android:id="@+id/cvDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@id/btnEditProfile"
+            app:layout_constraintBottom_toTopOf="@id/tvCPE"
             app:layout_constraintTop_toBottomOf="@id/tvRole">
 
             <TextView
@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Aadhar Number"
-                android:textColor="@color/colorGrey600"
+                android:textColor="@color/colorGrey700"
                 app:layout_constraintEnd_toStartOf="@id/tvPan"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -119,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text='@{viewModel.obsUser.aadhar_number ?? @string/n_a}'
-                android:textColor="@color/colorGrey700"
+                android:textColor="@color/colorGrey900"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/tvAadhar"
                 app:layout_constraintStart_toStartOf="@id/tvAadhar"
@@ -133,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Pan Number"
-                android:textColor="@color/colorGrey600"
+                android:textColor="@color/colorGrey700"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tvAadhar"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -144,7 +144,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text='@{viewModel.obsUser.pan_card ?? @string/n_a}'
-                android:textColor="@color/colorGrey700"
+                android:textColor="@color/colorGrey900"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/tvPan"
                 app:layout_constraintStart_toStartOf="@id/tvPan"
@@ -158,7 +158,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14sp"
                 android:text="Email"
-                android:textColor="@color/colorGrey600"
+                android:textColor="@color/colorGrey700"
                 app:layout_constraintEnd_toEndOf="@id/tvAadhar"
                 app:layout_constraintStart_toStartOf="@id/tvAadhar"
                 app:layout_constraintTop_toBottomOf="@id/tvAadharValue" />
@@ -169,7 +169,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text='@{viewModel.obsUser.email ?? @string/n_a}'
-                android:textColor="@color/colorGrey700"
+                android:textColor="@color/colorGrey900"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/tvAadhar"
                 app:layout_constraintStart_toStartOf="@id/tvAadhar"
@@ -183,7 +183,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14sp"
                 android:text="Alternate Number"
-                android:textColor="@color/colorGrey600"
+                android:textColor="@color/colorGrey700"
                 app:layout_constraintEnd_toEndOf="@id/tvPan"
                 app:layout_constraintStart_toStartOf="@id/tvPan"
                 app:layout_constraintTop_toBottomOf="@id/tvPanValue" />
@@ -194,7 +194,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text='@{viewModel.obsUser.alternate_no ?? @string/n_a}'
-                android:textColor="@color/colorGrey700"
+                android:textColor="@color/colorGrey900"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/tvPan"
                 app:layout_constraintStart_toStartOf="@id/tvPan"
@@ -208,7 +208,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14sp"
                 android:text="Account Number"
-                android:textColor="@color/colorGrey600"
+                android:textColor="@color/colorGrey700"
                 app:layout_constraintEnd_toEndOf="@id/tvAadhar"
                 app:layout_constraintStart_toStartOf="@id/tvAadhar"
                 app:layout_constraintTop_toBottomOf="@id/tvMailValue" />
@@ -218,7 +218,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text='@{viewModel.obsUser.bank_account_no ?? @string/n_a}'
-                android:textColor="@color/colorGrey700"
+                android:textColor="@color/colorGrey900"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/tvAadhar"
                 app:layout_constraintStart_toStartOf="@id/tvAadhar"
@@ -232,7 +232,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14sp"
                 android:text="IFSC Code"
-                android:textColor="@color/colorGrey600"
+                android:textColor="@color/colorGrey700"
                 app:layout_constraintEnd_toEndOf="@id/tvPan"
                 app:layout_constraintStart_toStartOf="@id/tvPan"
                 app:layout_constraintTop_toBottomOf="@id/tvAlternateValue" />
@@ -242,7 +242,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text='@{viewModel.obsUser.ifsc_no ?? @string/n_a}'
-                android:textColor="@color/colorGrey700"
+                android:textColor="@color/colorGrey900"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/tvPan"
                 app:layout_constraintStart_toStartOf="@id/tvPan"
@@ -254,16 +254,15 @@
             android:id="@+id/btnEditProfile"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginEnd="1dp"
             android:background="@color/colorPrimaryGreenDark"
             android:foreground="?selectableItemBackground"
             android:orientation="horizontal"
             android:padding="17dp"
-            app:layout_constraintBottom_toTopOf="@id/tvCPE"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btnPasswordChange"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cvDetails">
+            app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
                 android:id="@+id/ivProfile"
@@ -295,8 +294,7 @@
             android:id="@+id/btnPasswordChange"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="1dp"
             android:background="@color/colorPrimaryGreenDark"
             android:foreground="?selectableItemBackground"
             android:orientation="horizontal"
@@ -336,7 +334,7 @@
             android:id="@+id/tvCPE"
             android:layout_width="110sp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="2dp"
             android:adjustViewBounds="true"
             android:src="@drawable/uni_big"
             android:textColor="@color/colorGrey700"
@@ -352,7 +350,7 @@
             android:paddingBottom="20dp"
             android:textAlignment="center"
             android:textColor="@color/colorGrey700"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnEditProfile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:text="v1.00105001" />

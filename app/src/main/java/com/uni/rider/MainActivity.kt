@@ -10,8 +10,11 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -73,6 +76,16 @@ class MainActivity : AppCompatActivity() {
                 R.id.homeFragment, R.id.salaryFragment, R.id.feedbackFragment, R.id.profileFragment, R.id.termsFragment, R.id.helpFragment), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val headerView: View = navView.inflateHeaderView(R.layout.nav_header_main)
+        val user = repoPrefs.getLoggedInUser()
+
+        headerView.findViewById<TextView>(R.id.tvNavHeaderName).text = user?.name
+        headerView.findViewById<TextView>(R.id.tvNavHeaderId).text = user?.sf_id
+        headerView.findViewById<ConstraintLayout>(R.id.cvNavHeader).setOnClickListener {
+            navController.navigate(R.id.profileFragment)
+            drawerLayout.closeDrawers()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -166,7 +179,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.actionLogout -> {
-                showConfirmationDialogueFor("Alert", "Are you sure you want Logout") { logoutUser() }
+                showConfirmationDialogueFor("Logout", "Are you sure?") { logoutUser() }
                 true
             }
             R.id.actionPolicy -> {

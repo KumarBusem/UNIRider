@@ -34,6 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Order ID"
+            android:textColor="@color/colorGrey700"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{data.order_id}"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimaryGreenDark"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvOrderIdHead"
             tools:text="373737" />
@@ -54,6 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Customer Name"
+            android:textColor="@color/colorGrey700"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{data.customer_name}"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimaryGreenDark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvNameHead"
             tools:text="Kumar Busem" />

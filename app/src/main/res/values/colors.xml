@@ -13,6 +13,7 @@
     <color name="colorGrey500">#8E8E8E</color>
     <color name="colorGrey600">#808080</color>
     <color name="colorGrey700">#454545</color>
+    <color name="colorGrey900">#232323</color>
 
     <color name="milky_white">#F5F6F8</color>
 </resources>

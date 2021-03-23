@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="17sp"
             android:text='@{DateUtils.INSTANCE.getMonthYearForSalary(data)}'
-            android:textColor="#232323"
+            android:textColor="@color/colorGrey900"
             android:textSize="18sp"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="May 2020" />
@@ -101,7 +101,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@{String.valueOf(data.delivered)}"
-                        android:textColor="#636363"
+                        android:textColor="@color/colorGrey900"
                         android:textSize="17sp"
                         tools:text="1130" />
                 </LinearLayout>
@@ -135,7 +135,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text='@{"₹" + String.valueOf(data.tds)}'
-                        android:textColor="#636363"
+                        android:textColor="@color/colorGrey900"
                         android:textSize="17sp"
                         tools:text="₹300" />
                 </LinearLayout>

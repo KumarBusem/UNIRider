@@ -82,7 +82,7 @@
                 android:layout_height="1sp"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="4dp"
-                android:background="#D3D3D3"
+                android:background="#BCBCBC"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@id/cvDateLayout" />
 
@@ -113,7 +113,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
-                    android:textColor="@color/colorGrey700"
+                    android:textColor="@color/colorGrey900"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toEndOf="@id/tvOFD"
                     app:layout_constraintStart_toStartOf="@id/tvOFD"
@@ -140,7 +140,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
-                    android:textColor="@color/colorGrey700"
+                    android:textColor="@color/colorGrey900"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toEndOf="@id/tvDelivered"
                     app:layout_constraintStart_toStartOf="@id/tvDelivered"
@@ -167,7 +167,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
-                    android:textColor="@color/colorGrey700"
+                    android:textColor="@color/colorGrey900"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toEndOf="@id/tvOFD"
                     app:layout_constraintStart_toStartOf="@id/tvOFD"
@@ -194,7 +194,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
-                    android:textColor="@color/colorGrey700"
+                    android:textColor="@color/colorGrey900"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toEndOf="@id/tvDelivered"
                     app:layout_constraintStart_toStartOf="@id/tvDelivered"
@@ -208,7 +208,7 @@
                 android:layout_height="1sp"
                 android:layout_marginHorizontal="16sp"
                 android:layout_marginTop="30dp"
-                android:background="#D3D3D3"
+                android:background="#BCBCBC"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@id/cvData" />
 
@@ -229,7 +229,7 @@
                     app:layout_constraintBottom_toBottomOf="@id/tvRunsheetsForSelectedMonth"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@id/tvRunsheetsForSelectedMonth"
-                    app:tint="@color/colorGrey500" />
+                    app:tint="@color/colorGrey600" />
 
                 <TextView
                     android:id="@+id/tvRunsheetsForSelectedMonth"
@@ -238,7 +238,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="Selected month runsheets"
-                    android:textColor="#272727"
+                    android:textColor="@color/colorGrey900"
                     android:layout_marginStart="4sp"
                     android:textSize="17sp"
                     android:layout_marginBottom="20sp"
@@ -250,7 +250,7 @@
                     android:id="@+id/line3"
                     android:layout_width="match_parent"
                     android:layout_height="1sp"
-                    android:background="#D3D3D3"
+                    android:background="#BCBCBC"
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_marginTop="20sp"/>
